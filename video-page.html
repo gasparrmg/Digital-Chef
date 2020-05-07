@@ -44,13 +44,19 @@
           class="leftside vertical-center"
           style="display: block; text-align: center;"
         >
-          <h1>DIGITAL CHEF</h1>
+          <a href="index.html"><h1>DIGITAL CHEF</h1></a>
           <h5>Sopa de Legumes com Feijão Branco e Espinafres</h5>
 
           <div
             class="col-md-10 embed-responsive embed-responsive-16by9 center-horizontal"
           >
-            <video width="100%" controls loop class="embed-responsive-item">
+            <video
+              id="main-video"
+              width="100%"
+              controls
+              loop
+              class="embed-responsive-item"
+            >
               <source
                 src="video/Sopa de Legumes com Feijão Branco e Espinafres.mp4"
                 type="video/mp4"
@@ -69,7 +75,7 @@
                 class="img-responsive"
                 src="img/video-controls/btn_skip_backward.svg"
             /></a>
-            <a class="video-control" href="#"
+            <a class="video-control" href="#" id="btn_play"
               ><img
                 class="img-responsive"
                 src="img/video-controls/btn_play.svg"
@@ -217,6 +223,22 @@
 
       <!--END RIGHTSIDE-->
     </div>
+
+    <script>
+      $(function () {
+        $("#btn_play").on("click", function () {
+          let video = $("#main-video").get(0);
+
+          if (video.paused) {
+            video.play();
+            $("#btn_play img").attr("src", "img/video-controls/btn_pause.svg");
+          } else {
+            video.pause();
+            $("#btn_play img").attr("src", "img/video-controls/btn_play.svg");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
 

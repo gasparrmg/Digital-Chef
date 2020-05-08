@@ -1,132 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous">
+		</script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+		></script>
+		<script src="./resources/js/promo-video.js"></script>
+		<script src="./resources/js/main-video.js"></script>
+		<script src="./resources/js/transitions.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./resources/css/style.css" />
 
-    <title>Multimedia Project</title>
-  </head>
-  <body>
-    <img
-      class="logo-homepage rounded mx-auto d-block"
-      src="img/logo_digitalchef.svg"
-      alt="Digital Chef Logo"
-    />
-    <h1>Digital Chef</h1>
-    <div class="container">
-      <div class="dish-list-homepage row">
-        <div class="dish-card col-sm">
-          <a class="text-decoration-none" href="video-page.html">
-            <img
-              class="rounded mx-auto d-block"
-              src="img/soup.svg"
-              alt="Image Sopa"
-            />
-            <h2>Sopa</h2>
-            <p class="dish-name">Sopa de feijão branco e espinafres</p>
-          </a>
-        </div>
-        <div class="dish-card col-sm">
-          <a class="text-decoration-none" href="#">
-            <img
-              class="rounded mx-auto d-block"
-              src="img/vegan.svg"
-              alt="Image Vegan"
-            />
-            <h2>Vegan</h2>
-            <p class="dish-name">
-              Almôndegas crocantes de feijão com molho de tomate e pimento
-            </p>
-          </a>
-        </div>
-        <div class="dish-card col-sm">
-          <a class="text-decoration-none" href="#">
-            <img
-              class="rounded mx-auto d-block"
-              src="img/meat.svg"
-              alt="Image Carne"
-            />
-            <h2>Carne</h2>
-            <p class="dish-name">Strogonoff de frango</p>
-          </a>
-        </div>
-        <div class="dish-card col-sm">
-          <a class="text-decoration-none" href="#">
-            <img
-              class="rounded mx-auto d-block"
-              src="img/desert.svg"
-              alt="Image Sobremesa"
-            />
-            <h2>Doce</h2>
-            <p class="dish-name">Mousse de chocolate</p>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- START Promotional button and popup-->
-    <div class="cta-promo-video text-center" id="videoLink">
-      <button
-        class="cta-promo-video-btn"
-        data-toggle="modal"
-        data-target="#exampleModalCenter"
-      >
-        <span>Vídeo promocional</span>
-      </button>
-    </div>
-    <div class="modal fade" id="exampleModalCenter">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <video width="100%" controls loop>
-              <source src="video/PromoVideoDigitalChef.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PAUSE VIDEO WHEN LEAVING POPUP-->
-    <script>
-      $(function () {
-        $("#exampleModalCenter")
-          .modal({ show: false })
-          .on("hidden.bs.modal", function () {
-            $(this).find("video")[0].pause();
-          });
-      });
-    </script>
-
-    <!-- END Promotional button and popup-->
-  </body>
+        <title>Multimedia Project</title>
+    </head>
+    <body>
+        <div class="homepage-wrapper">
+			<img
+			    class="logo-homepage rounded mx-auto d-block"
+			    src="./resources/img/logo_digitalchef.svg"
+			    alt="Digital Chef Logo"
+			/>
+			<h1>Digital Chef</h1>
+			<div class="container">
+			    <div class="dish-list homepage row">
+			        <div class="dish-card col-sm">
+			            <a class="text-decoration-none" href="#">
+			                <img
+			                    class="rounded mx-auto d-block"
+			                    src="./resources/img/soup.svg"
+			                    alt="Image Sopa"
+			                />
+			                <h2>Sopa</h2>
+			                <p class="dish-name">Sopa de feijão branco e espinafres</p>
+			            </a>
+			        </div>
+			        <div class="dish-card col-sm">
+			            <a class="text-decoration-none" href="#">
+			                <img
+			                    class="rounded mx-auto d-block"
+			                    src="./resources/img/vegan.svg"
+			                    alt="Image Vegan"
+			                />
+			                <h2>Vegan</h2>
+			                <p class="dish-name">
+			                    Almôndegas crocantes de feijão com molho de tomate e pimento
+			                </p>
+			            </a>
+			        </div>
+			        <div class="dish-card col-sm">
+			            <a class="text-decoration-none" href="#">
+			                <img
+			                    class="rounded mx-auto d-block"
+			                    src="./resources/img/meat.svg"
+			                    alt="Image Carne"
+			                />
+			                <h2>Carne</h2>
+			                <p class="dish-name">Strogonoff de frango</p>
+			            </a>
+			        </div>
+			        <div class="dish-card col-sm">
+			            <a class="text-decoration-none" href="#">
+			                <img
+			                    class="rounded mx-auto d-block"
+			                    src="./resources/img/desert.svg"
+			                    alt="Image Sobremesa"
+			                />
+			                <h2>Doce</h2>
+			                <p class="dish-name">Mousse de chocolate</p>
+			            </a>
+			        </div>
+			    </div>
+			</div>
+			
+			<!-- START Promotional button and popup-->
+			<div class="cta-promo-video text-center" id="videoLink">
+			    <button
+			        class="cta-promo-video-btn"
+			        data-toggle="modal"
+			        data-target="#exampleModalCenter"
+			    >
+			    <span>Vídeo promocional</span>
+			    </button>
+			</div>
+			<div class="modal fade" id="exampleModalCenter">
+			    <div class="modal-dialog modal-dialog-centered" role="document">
+			        <div class="modal-content">
+			            <div class="modal-body">
+			                <video width="100%" controls loop>
+			                    <source src="./resources/video/PromoVideoDigitalChef.mp4" type="video/mp4" />
+			                </video>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<div class="videopage-wrapper">
+			<div class="row no-gutters">
+				<!--START LEFTSIDE-->
+				<div class="col no-gutters">
+					<div
+						class="leftside vertical-center"
+						style="display: block; text-align: center;"
+					>
+						<a href="index.html"><h1>DIGITAL CHEF</h1></a>
+						<h5>Sopa de Legumes com Feijão Branco e Espinafres</h5>
+	
+						<div class="col-md-10 embed-responsive embed-responsive-16by9 center-horizontal">
+							<video
+								id="main-video"
+								width="100%"
+								controls
+								loop
+								class="embed-responsive-item"
+							>
+								<source
+									src="./resources/video/Sopa de Legumes com Feijão Branco e Espinafres.mp4"
+									type="video/mp4"
+								/>
+							</video>
+						</div>
+	
+						<div class="video-controls-container d-flex justify-content-center">
+							<a class="video-control" href="#"
+								><img
+									class="img-responsive"
+									src="./resources/img/video-controls/btn_prev.svg"
+							/></a>
+							<a class="video-control" href="#"
+								><img
+									class="img-responsive"
+									src="./resources/img/video-controls/btn_skip_backward.svg"
+							/></a>
+							<a class="video-control" href="#" id="btn_play"
+								><img
+									class="img-responsive"
+									src="./resources/img/video-controls/btn_play.svg"
+							/></a>
+							<a class="video-control" href="#"
+								><img
+									class="img-responsive"
+									src="./resources/img/video-controls/btn_skip_forward.svg"
+							/></a>
+							<a class="video-control" href="#"
+								><img
+									class="img-responsive"
+									src="./resources/img/video-controls/btn_next.svg"
+							/></a>
+						</div>
+					</div>
+				</div>
+				<!--END LEFTSIDE-->
+	
+				<!--START RIGHTSIDE-->
+				<div class="col no-gutters">
+					<div class="rightside">
+						<div class="text-center">
+							<div class="btn-group" data-toggle="buttons" style="width: 80%;">
+								<a href="#" class="btn btn-default" style="width: 50%;">
+									<h2 class="tab-header">Images</h2>
+								</a>
+								<a href="#" class="btn btn-default" style="width: 50%;">
+									<h2 class="tab-header">Text</h2>
+								</a>
+							</div>
+						</div>
+	
+						<!--Start Image Gallery-->
+						<div class="container-fluid">
+							<div class="row align-items-top" style="margin: 20px 0px;">
+								<div class="col-md-1">
+									<h2>1.</h2>
+								</div>
+								<div class="col-md-11">
+									<div class="row align-items-center mb-3">
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/leek.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/carrot.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/potato.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/potato.svg" /></a>
+											</div>
+										</div>
+									</div>
+	
+									<div class="row align-items-center mb-3">
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/leek.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/carrot.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/potato.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/potato.svg" /></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row align-items-top" style="margin: 20px 0px;">
+								<div class="col-md-1">
+									<h2>2.</h2>
+								</div>
+								<div class="col-md-11">
+									<div class="row align-items-center mb-3">
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/leek.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/carrot.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/potato.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/potato.svg" /></a>
+											</div>
+										</div>
+									</div>
+	
+									<div class="row align-items-center mb-3">
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/leek.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/carrot.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/potato.svg" /></a>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="thumbnail">
+												<a href="#"><img src="./resources/img/sopa/potato.svg" /></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<!--END Image Gallery-->
+					</div>
+				</div>
+	
+				<!--END RIGHTSIDE-->
+			</div>
+			<div class="container">
+			    <div class="dish-list videopage row">
+			        <div class="dish-card col-sm">
+			            <a class="text-decoration-none">
+			                <img
+			                    class="rounded mx-auto d-block"
+			                    src="./resources/img/soup.svg"
+			                    alt="Image Sopa"
+			                />
+			                <h5>Sopa</h5>
+			            </a>
+			        </div>
+			        <div class="dish-card col-sm">
+			            <a class="text-decoration-none" href="#">
+			                <img
+			                    class="rounded mx-auto d-block"
+			                    src="./resources/img/vegan.svg"
+			                    alt="Image Vegan"
+			                />
+			                <h5>Vegan</h5>
+			            </a>
+			        </div>
+			        <div class="dish-card col-sm">
+			            <a class="text-decoration-none" href="#">
+			                <img
+			                    class="rounded mx-auto d-block"
+			                    src="./resources/img/meat.svg"
+			                    alt="Image Carne"
+			                />
+			                <h5>Carne</h5>
+			            </a>
+			        </div>
+			        <div class="dish-card col-sm">
+			            <a class="text-decoration-none" href="#">
+			                <img
+			                    class="rounded mx-auto d-block"
+			                    src="./resources/img/desert.svg"
+			                    alt="Image Sobremesa"
+			                />
+			                <h5>Doce</h5>
+			            </a>
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<!-- <script>
+			$(".dish-list.homepage .dish-card a").click(function (e) { 
+    			e.preventDefault();
+    			console.log("IM HERE");
+    			$(".homepage-wrapper").fadeOut(1000, function() {
+        			//animation complete
+        			$(".videopage-wrapper").fadeIn(1000);
+    			});
+			});
+		</script> -->
+	</body>
 </html>

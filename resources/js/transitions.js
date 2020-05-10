@@ -1,45 +1,94 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  $(".dish-list.homepage .dish-card a").click(function (e) {
+    e.preventDefault();
+    console.log("IM HERE");
 
+    $(".cta-promo-video-btn").fadeOut(100);
 
-    $(".dish-list.homepage .dish-card a").click(function (e) { 
+    $(".dish-list.homepage .dish-card").css("margin", "0px");
 
-        e.preventDefault();
-        console.log("IM HERE");
+    $(".dish-list.homepage").animate(
+      {
+        margin: "20px 300px 0px 300px",
+      },
+      1000
+    );
 
-        $(".cta-promo-video-btn").fadeOut(100);
-       
-        $(".dish-list.homepage .dish-card").css("margin","0px")
-           
-          $(".dish-list.homepage").animate({ 
-            margin: "20px 300px 0px 300px",
-          }, 1000 ); 
-          
-          $(".dish-card h2").animate({ 
-            'font-size': "1.25rem",
-          }, 1000 ); 
+    $(".dish-card h2").animate(
+      {
+        "font-size": "1.25rem",
+      },
+      1000
+    );
 
-          $(".dish-card img").animate({ 
-            width: "60px",
-          }, 1000 );
+    $(".dish-card img").animate(
+      {
+        width: "60px",
+      },
+      1000
+    );
 
-           $(".dish-card").animate({ 
-            top: "+=300px",
-          }, { duration: 1000, queue: false });
+    $(".dish-card").animate(
+      {
+        top: "+=300px",
+      },
+      { duration: 1000, queue: false }
+    );
 
-           
+    // - TRANSITION FROM MAIN TO VIDEOPAGE ---------------
+    $(".homepage-wrapper").fadeOut(1500, function () {
+      //animation complete
 
-
-  // - TRANSITION FROM MAIN TO VIDEOPAGE ---------------
-        $(".homepage-wrapper").fadeOut(1500, function() {
-            //animation complete
-
-            
-            $(".videopage-wrapper").fadeIn(3000);
-            $(".dish-card").animate({ 
-                top: "-=300px",
-              }, 3000 );
-        });
+      $(".videopage-wrapper").fadeIn(3000);
+      $(".dish-card").animate(
+        {
+          top: "-=300px",
+        },
+        3000
+      );
     });
- // ----------------------------------------------------
+  });
+  // ----------------------------------------------------
 
+  // - SWITCH BETWEEN IMAGES OR TEXT ---------------------
+  $("#btn-text").click(function (e) {
+    e.preventDefault();
+
+    $("#image-gallery-wrapper").fadeOut(1500, function () {
+      $("#text-section-wrapper").fadeIn(1500);
+      $("#btn-images h2").animate(
+        {
+          color: "#222222",
+        },
+        1500
+      );
+      $("#btn-text h2").animate(
+        {
+          color: "#f7f7f7",
+        },
+        1500
+      );
+    });
+  });
+
+  $("#btn-images").click(function (e) {
+    e.preventDefault();
+
+    $("#text-section-wrapper").fadeOut(1500, function () {
+      $("#image-gallery-wrapper").fadeIn(1500);
+      $("#btn-text h2").animate(
+        {
+          color: "#222222",
+        },
+        1500
+      );
+      $("#btn-images h2").animate(
+        {
+          color: "#f7f7f7",
+        },
+        1500
+      );
+    });
+  });
+  //-------------------------------------------------------
 });

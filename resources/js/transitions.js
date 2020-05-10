@@ -58,13 +58,15 @@ $(document).ready(function () {
       $("#text-section-wrapper").fadeIn(1500);
       $("#btn-images h2").animate(
         {
-          color: "#222222",
+          color: "#000000",
+          opacity: 0.5,
         },
         1500
       );
       $("#btn-text h2").animate(
         {
           color: "#f7f7f7",
+          opacity: 1,
         },
         1500
       );
@@ -78,13 +80,15 @@ $(document).ready(function () {
       $("#image-gallery-wrapper").fadeIn(1500);
       $("#btn-text h2").animate(
         {
-          color: "#222222",
+          color: "#000000",
+          opacity: 0.5,
         },
         1500
       );
       $("#btn-images h2").animate(
         {
           color: "#f7f7f7",
+          opacity: 1,
         },
         1500
       );

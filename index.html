@@ -134,7 +134,16 @@
             <div style="overflow: unset;"
               class="col-md-10 embed-responsive embed-responsive-16by9 center-horizontal video-container"
             >
-              <img class="ingredients-bubble" src="./resources/img/video-controls/ingredientes_bubble.svg" alt="lista de ingredientes link">
+              <img class="ingredients-bubble" src="./resources/img/video-controls/ingredientes_bubble.svg" data-toggle="modal" data-target="#ModalIngredientsList" alt="lista de ingredientes link">   
+
+              <div class="modal fade bd-example-modal-lg" id="ModalIngredientsList" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <img src="./resources/img/ingredients-list.png" class="img-responsive">  
+                  </div>
+                </div>
+              </div>
+              
               <video
                 id="main-video"
                 width="100%"

@@ -115,6 +115,10 @@ h5 {
   padding: 20px;
 }
 
+.rightside {
+  margin-top: 10px;
+}
+
 .center-horizontal {
   margin: 0 auto;
 }

@@ -54,45 +54,46 @@ $(document).ready(function () {
   $("#btn-text").click(function (e) {
     e.preventDefault();
 
-    $("#image-gallery-wrapper").fadeOut(1500, function () {
-      $("#text-section-wrapper").fadeIn(1500);
-      $("#btn-images h2").animate(
-        {
-          color: "#000000",
-          opacity: 0.5,
-        },
-        1500
-      );
-      $("#btn-text h2").animate(
-        {
-          color: "#f7f7f7",
-          opacity: 1,
-        },
-        1500
-      );
+    $("#image-gallery-wrapper").fadeOut(500, function () {
+      $("#text-section-wrapper").fadeIn(500);
     });
+    $("#btn-images h2").animate(
+      {
+        color: "#000000",
+        opacity: 0.5,
+      },
+      500
+    );
+    $("#btn-text h2").animate(
+      {
+        color: "#f7f7f7",
+        opacity: 1,
+      },
+      500
+    );
   });
 
   $("#btn-images").click(function (e) {
     e.preventDefault();
 
-    $("#text-section-wrapper").fadeOut(1500, function () {
-      $("#image-gallery-wrapper").fadeIn(1500);
-      $("#btn-text h2").animate(
-        {
-          color: "#000000",
-          opacity: 0.5,
-        },
-        1500
-      );
-      $("#btn-images h2").animate(
-        {
-          color: "#f7f7f7",
-          opacity: 1,
-        },
-        1500
-      );
+    $("#text-section-wrapper").fadeOut(500, function () {
+      $("#image-gallery-wrapper").fadeIn(500);
     });
+
+    $("#btn-text h2").animate(
+      {
+        color: "#000000",
+        opacity: 0.5,
+      },
+      500
+    );
+    $("#btn-images h2").animate(
+      {
+        color: "#f7f7f7",
+        opacity: 1,
+      },
+      500
+    );
   });
   //-------------------------------------------------------
 });

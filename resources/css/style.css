@@ -166,3 +166,44 @@ h5 {
   filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
   /* Similar syntax to box-shadow */
 }
+
+.ingredients-bubble {
+  width: 100px;
+  position: absolute;
+  z-index: 1;
+  top: 55px;
+  right: 20px;
+  display: none;
+
+  animation: jumping 1s infinite;
+}
+
+.ingredients-bubble:hover {
+  opacity: 0.8;
+  transition: .3s ease-in-out;
+}
+
+.video-container {
+  position: relative;
+}
+
+#main-video {
+}
+
+.img-step{
+  opacity: 0.3;
+}
+
+/* --------ANIMATIONS-------- */
+
+@keyframes jumping {
+  0% { 
+    top: 65px; 
+  } 
+  50% { 
+    top: 55px; 
+  } 
+  100% { 
+    top: 65px; 
+  }
+}

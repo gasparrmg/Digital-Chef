@@ -39,12 +39,15 @@ $(document).ready(function () {
     $(".homepage-wrapper").fadeOut(1500, function () {
       //animation complete
 
-      $(".videopage-wrapper").fadeIn(3000);
+      $(".videopage-wrapper").fadeIn(1500, function () {
+        $("#main-video").get(0).play();
+        $("#btn_play img").attr("src", "./resources/img/video-controls/btn_pause.svg");
+      });
       $(".dish-card").animate(
         {
           top: "-=300px",
         },
-        3000
+        1500
       );
     });
   });

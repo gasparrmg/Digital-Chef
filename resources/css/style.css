@@ -190,8 +190,12 @@ h5 {
 #main-video {
 }
 
-.img-step{
+.img-step, .txt-step{
   opacity: 0.3;
+}
+
+li.txt-step{
+  cursor: pointer;
 }
 
 /* --------ANIMATIONS-------- */

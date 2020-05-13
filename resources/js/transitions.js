@@ -1,6 +1,5 @@
 $(document).ready(function () {
-  $(".dish-list.homepage .dish-card a").click(function (e) {
-    e.preventDefault();
+  $(".dish-list.homepage .dish-card a").click(function () {
     console.log("IM HERE");
 
     $(".cta-promo-video-btn").fadeOut(100);

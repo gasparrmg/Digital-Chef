@@ -36,6 +36,10 @@
 
     <title>Digital Chef</title>
   </head>
+  <script>
+    window.video = "";
+  </script>
+
   <body>
     <div class="homepage-wrapper">
       <img
@@ -47,8 +51,9 @@
       <div class="container">
         <div class="dish-list homepage row">
           <div class="dish-card col-sm" id="dish-card">
-            <a class="text-decoration-none" href="#sopa">
+            <a class="text-decoration-none" href="#" class="dish-card-sopa">
               <img
+                id="dish-card-sopa-img"
                 class="rounded mx-auto d-block"
                 src="./resources/img/soup.svg"
                 alt="Image Sopa"
@@ -58,8 +63,9 @@
             </a>
           </div>
           <div class="dish-card col-sm">
-            <a class="text-decoration-none" href="#">
+            <a class="text-decoration-none" href="#" id="dish-card-vegan">
               <img
+                id="dish-card-vegan-img"
                 class="rounded mx-auto d-block"
                 src="./resources/img/vegan.svg"
                 alt="Image Vegan"
@@ -71,8 +77,9 @@
             </a>
           </div>
           <div class="dish-card col-sm">
-            <a class="text-decoration-none" href="#">
+            <a class="text-decoration-none" href="#" id="dish-card-meat">
               <img
+                id="dish-card-meat-img"
                 class="rounded mx-auto d-block"
                 src="./resources/img/meat.svg"
                 alt="Image Carne"
@@ -82,8 +89,9 @@
             </a>
           </div>
           <div class="dish-card col-sm">
-            <a class="text-decoration-none" href="#">
+            <a class="text-decoration-none" href="#" id="dish-card-desert">
               <img
+                id="dish-card-desert-img"
                 class="rounded mx-auto d-block"
                 src="./resources/img/desert.svg"
                 alt="Image Sobremesa"
@@ -120,6 +128,7 @@
         </div>
       </div>
     </div>
+
     <div class="videopage-wrapper">
       <div class="row no-gutters">
         <!--START LEFTSIDE-->
@@ -129,21 +138,40 @@
             style="display: block; text-align: center;"
           >
             <a href="index.html"><h1>DIGITAL CHEF</h1></a>
-            <h5>Sopa de Legumes com Feijão Branco e Espinafres</h5>
+            <h5 id="dish-title">
+              Sopa de Legumes com Feijão Branco e Espinafres
+            </h5>
 
-            <div style="overflow: unset;"
+            <div
+              style="overflow: unset;"
               class="col-md-10 embed-responsive embed-responsive-16by9 center-horizontal video-container"
             >
-              <img class="ingredients-bubble" src="./resources/img/video-controls/ingredientes_bubble.svg" data-toggle="modal" data-target="#ModalIngredientsList" alt="lista de ingredientes link">   
+              <img
+                class="ingredients-bubble"
+                src="./resources/img/video-controls/ingredientes_bubble.svg"
+                data-toggle="modal"
+                data-target="#ModalIngredientsList"
+                alt="lista de ingredientes link"
+              />
 
-              <div class="modal fade bd-example-modal-lg" id="ModalIngredientsList" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div
+                class="modal fade bd-example-modal-lg"
+                id="ModalIngredientsList"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="myLargeModalLabel"
+                aria-hidden="true"
+              >
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
-                    <img src="./resources/img/ingredients-list.png" class="img-responsive">  
+                    <img
+                      src="./resources/img/ingredients-list.png"
+                      class="img-responsive"
+                    />
                   </div>
                 </div>
               </div>
-              
+
               <video
                 id="main-video"
                 width="100%"
@@ -215,8 +243,14 @@
 
             <!--Start Image Gallery-->
             <div class="container-fluid">
-              <div id="image-gallery-wrapper">
-                <div class="row align-items-top img-step ingredients" style="margin: 20px 0px;">
+              <!--Soup sections-->
+              <div class="image-gallery-wrapper" id="images-soup">
+                <div
+                  class="row align-items-top img-step ingredients"
+                  style="margin: 20px 0px;"
+                >
+                  <h5>Soup Section Test! Remove me!</h5>
+
                   <div class="col-md-1">
                     <h2>1.</h2>
                   </div>
@@ -230,10 +264,12 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
-                <div class="row align-items-top img-step two" style="margin: 20px 0px;">
+                <div
+                  class="row align-items-top img-step two"
+                  style="margin: 20px 0px;"
+                >
                   <div class="col-md-1">
                     <h2>2.</h2>
                   </div>
@@ -261,11 +297,13 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
 
-                <div class="row align-items-top img-step three" style="margin: 20px 0px;">
+                <div
+                  class="row align-items-top img-step three"
+                  style="margin: 20px 0px;"
+                >
                   <div class="col-md-1">
                     <h2>3.</h2>
                   </div>
@@ -307,11 +345,13 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
 
-                <div class="row align-items-top img-step four" style="margin: 20px 0px;">
+                <div
+                  class="row align-items-top img-step four"
+                  style="margin: 20px 0px;"
+                >
                   <div class="col-md-1">
                     <h2>4.</h2>
                   </div>
@@ -335,7 +375,10 @@
                   </div>
                 </div>
 
-                <div class="row align-items-top img-step five" style="margin: 20px 0px;">
+                <div
+                  class="row align-items-top img-step five"
+                  style="margin: 20px 0px;"
+                >
                   <div class="col-md-1">
                     <h2>5.</h2>
                   </div>
@@ -363,11 +406,13 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
 
-                <div class="row align-items-top img-step six" style="margin: 20px 0px;">
+                <div
+                  class="row align-items-top img-step six"
+                  style="margin: 20px 0px;"
+                >
                   <div class="col-md-1">
                     <h2>6.</h2>
                   </div>
@@ -381,11 +426,657 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
-              <div id="text-section-wrapper">
+              <div class="text-section-wrapper" id="text-soup">
+                <ol>
+                  <li class="txt-step ingredients">
+                    Prepare os ingredientes.
+                  </li>
+                  <li class="txt-step two">
+                    Coloce o azeite e o alho francês numa panela.
+                  </li>
+                  <li class="txt-step three">
+                    Junte as batatas, as cenouras cortadas em pedaços e metade
+                    do feijão branco cozido. Tempere com sal e adicione
+                    aproximadamente 2 litros de água.<br />
+                    Mexa, tape e deixe cozer em lume médio durante 30 minutos.
+                  </li>
+                  <li class="txt-step four">
+                    Passe a sopa com a varinha mágica até que fique um creme.
+                    <br />
+                    Adicione 1 litro de água e deixe ferver.
+                  </li>
+                  <li class="txt-step five">
+                    Adicione as cenouras cortadas em cubinhos, os espinafres e o
+                    restante feijão branco. <br />
+                    Mexa e deixe cozer aproximadamente 10 minutos.
+                  </li>
+                  <li class="txt-step six">
+                    Retire do lume e sirva!
+                  </li>
+                </ol>
+              </div>
+
+              <!--Vegan section-->
+              <div class="image-gallery-wrapper" id="images-vegan">
+                <div
+                  class="row align-items-top img-step ingredients"
+                  style="margin: 20px 0px;"
+                >
+                  <h5>Vegan Section Test! Remove me!</h5>
+
+                  <div class="col-md-1">
+                    <h2>1.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/ingredients.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="row align-items-top img-step two"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>2.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/olive_oil.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/leek.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/pan.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step three"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>3.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/potato.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/carrot.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/beans.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/water.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/salt.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step four"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>4.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/food_processor.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/water.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step five"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>5.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/carrot.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/spinach.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/beans.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step six"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>6.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/checkmark.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-section-wrapper" id="text-vegan">
+                <ol>
+                  <li class="txt-step ingredients">
+                    Prepare os ingredientes.
+                  </li>
+                  <li class="txt-step two">
+                    Coloce o azeite e o alho francês numa panela.
+                  </li>
+                  <li class="txt-step three">
+                    Junte as batatas, as cenouras cortadas em pedaços e metade
+                    do feijão branco cozido. Tempere com sal e adicione
+                    aproximadamente 2 litros de água.<br />
+                    Mexa, tape e deixe cozer em lume médio durante 30 minutos.
+                  </li>
+                  <li class="txt-step four">
+                    Passe a sopa com a varinha mágica até que fique um creme.
+                    <br />
+                    Adicione 1 litro de água e deixe ferver.
+                  </li>
+                  <li class="txt-step five">
+                    Adicione as cenouras cortadas em cubinhos, os espinafres e o
+                    restante feijão branco. <br />
+                    Mexa e deixe cozer aproximadamente 10 minutos.
+                  </li>
+                  <li class="txt-step six">
+                    Retire do lume e sirva!
+                  </li>
+                </ol>
+              </div>
+
+              <!--Meat section-->
+              <div class="image-gallery-wrapper" id="images-meat">
+                <div
+                  class="row align-items-top img-step ingredients"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h5>Meat Section Test! Remove me!</h5>
+                    <h2>1.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/ingredients.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="row align-items-top img-step two"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>2.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/olive_oil.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/leek.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/pan.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step three"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>3.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/potato.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/carrot.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/beans.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/water.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/salt.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step four"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>4.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/food_processor.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/water.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step five"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>5.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/carrot.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/spinach.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/beans.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step six"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>6.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/checkmark.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-section-wrapper" id="text-meat">
+                <ol>
+                  <li class="txt-step ingredients">
+                    Prepare os ingredientes.
+                  </li>
+                  <li class="txt-step two">
+                    Coloce o azeite e o alho francês numa panela.
+                  </li>
+                  <li class="txt-step three">
+                    Junte as batatas, as cenouras cortadas em pedaços e metade
+                    do feijão branco cozido. Tempere com sal e adicione
+                    aproximadamente 2 litros de água.<br />
+                    Mexa, tape e deixe cozer em lume médio durante 30 minutos.
+                  </li>
+                  <li class="txt-step four">
+                    Passe a sopa com a varinha mágica até que fique um creme.
+                    <br />
+                    Adicione 1 litro de água e deixe ferver.
+                  </li>
+                  <li class="txt-step five">
+                    Adicione as cenouras cortadas em cubinhos, os espinafres e o
+                    restante feijão branco. <br />
+                    Mexa e deixe cozer aproximadamente 10 minutos.
+                  </li>
+                  <li class="txt-step six">
+                    Retire do lume e sirva!
+                  </li>
+                </ol>
+              </div>
+
+              <!--Desert section-->
+              <div class="image-gallery-wrapper" id="images-desert">
+                <div
+                  class="row align-items-top img-step ingredients"
+                  style="margin: 20px 0px;"
+                >
+                  <h5>Desert Section Test! Remove me!</h5>
+
+                  <div class="col-md-1">
+                    <h2>1.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/ingredients.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="row align-items-top img-step two"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>2.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/olive_oil.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/leek.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/pan.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step three"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>3.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/potato.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/carrot.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/beans.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/water.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/salt.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step four"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>4.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/food_processor.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/water.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step five"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>5.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/carrot.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/spinach.svg"
+                          /></a>
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/beans.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row align-items-top img-step six"
+                  style="margin: 20px 0px;"
+                >
+                  <div class="col-md-1">
+                    <h2>6.</h2>
+                  </div>
+                  <div class="col-md-11">
+                    <div class="row align-items-center mb-3">
+                      <div class="col-md-2">
+                        <div class="thumbnail">
+                          <a href="#"
+                            ><img src="./resources/img/sopa/checkmark.svg"
+                          /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-section-wrapper" id="text-desert">
                 <ol>
                   <li class="txt-step ingredients">
                     Prepare os ingredientes.
@@ -467,6 +1158,7 @@
         </div>
       </div>
     </div>
+
     <!-- <script>
 			$(".dish-list.homepage .dish-card a").click(function (e) { 
     			e.preventDefault();

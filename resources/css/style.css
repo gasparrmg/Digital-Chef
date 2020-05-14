@@ -139,7 +139,7 @@ h5 {
   opacity: 0.5;
 }
 
-#text-section-wrapper {
+.text-section-wrapper {
   display: none;
   font-weight: 500;
   font-size: 20px;
@@ -150,20 +150,21 @@ h5 {
   overflow-x: hidden;
 }
 
-#text-section-wrapper li {
+.text-section-wrapper li {
   margin: 0 0 2% 0;
 }
 
-#image-gallery-wrapper {
+.image-gallery-wrapper {
+  display: none;
   overflow: auto;
   max-height: 450px;
   overflow-x: hidden;
 }
 
-#image-gallery-wrapper img{
+.image-gallery-wrapper img {
   width: 75px;
-  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
   /* Similar syntax to box-shadow */
 }
 
@@ -180,34 +181,32 @@ h5 {
 
 .ingredients-bubble:hover {
   opacity: 0.8;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .video-container {
   position: relative;
 }
 
-#main-video {
-}
-
-.img-step, .txt-step{
+.img-step,
+.txt-step {
   opacity: 0.3;
 }
 
-li.txt-step{
+li.txt-step {
   cursor: pointer;
 }
 
 /* --------ANIMATIONS-------- */
 
 @keyframes jumping {
-  0% { 
-    top: 65px; 
-  } 
-  50% { 
-    top: 55px; 
-  } 
-  100% { 
-    top: 65px; 
+  0% {
+    top: 65px;
+  }
+  50% {
+    top: 55px;
+  }
+  100% {
+    top: 65px;
   }
 }

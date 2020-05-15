@@ -1,4 +1,6 @@
-function detectVideo(event) {
+
+function detectVideo(event, CURRENT) {
+  
   if (
     event.target.id == "dish-card-sopa" ||
     event.target.id == "dish-card-sopa-img"
@@ -20,12 +22,50 @@ function detectVideo(event) {
   ) {
     window.video = "desert";
   }
+
+  let video = $("#main-video").get(0);
+  var videoTimestamps = {
+      sopa: [
+          [14, 36],
+          [36, 49],
+          [49, 76],
+          [76, 98],
+          [98, 124],
+          [124, 143]
+      ],
+      vegan: [
+          [14, 44],
+          [44, 57],
+          [57, 82],
+          [82, 110],
+          [110, 121],
+          [121, 136],
+          [136, 153],
+          [153, 180],
+          [180, 200],
+          [200, 210],
+          [210, 228],
+          [228, 263],
+          [263, 284 ]
+      ]
+  };
+
+
+  videoControls(video, videoTimestamps);
+
+  stepHighlight(video, videoTimestamps);
+
+  stepClicks(video, videoTimestamps);
+
+  console.log(window.video);
+ 
+
 }
 
 $(document).ready(function () {
   $(".dish-list.homepage .dish-card a").click(function (event) {
     detectVideo(event);
-    console.log(window.video);
+    //console.log(window.video);
 
     $(".cta-promo-video-btn").fadeOut(100);
 
@@ -163,6 +203,7 @@ $(document).ready(function () {
   // ----------------------------------------------------
 
   // - SWITCH BETWEEN IMAGES OR TEXT ---------------------
+  
   $("#btn-text").click(function (e) {
     e.preventDefault();
 
@@ -173,19 +214,23 @@ $(document).ready(function () {
         });
         break;
       case "vegan":
-        $("#images-vegan").fadeOut(1000, function () {
+          $("#images-vegan").fadeOut(1000, function () {
           $("#text-vegan").fadeIn(1000);
         });
         break;
       case "meat":
-        $("#images-meat").fadeOut(1000, function () {
+        $("#images-meat").fadeOut(1000, function(){
           $("#text-meat").fadeIn(1000);
-        });
+      });
+        
         break;
+
       case "desert":
         $("#images-desert").fadeOut(1000, function () {
           $("#text-desert").fadeIn(1000);
+
         });
+
         break;
     }
 
@@ -220,9 +265,9 @@ $(document).ready(function () {
         });
         break;
       case "meat":
-        $("#text-meat").fadeOut(1000, function () {
+        $("#text-meat").fadeOut(1000,function(){
           $("#images-meat").fadeIn(1000);
-        });
+      });
         break;
       case "desert":
         $("#text-desert").fadeOut(1000, function () {
@@ -244,7 +289,9 @@ $(document).ready(function () {
         opacity: 1,
       },
       500
-    );
+    ); 
+
+    $("#btn-images").click()
   });
   //-------------------------------------------------------
 });

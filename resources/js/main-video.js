@@ -1,28 +1,12 @@
 $(document).ready(function () {
-    let video = $("#main-video").get(0);
-
-    var videoTimestamps = {
-        sopa: [
-            [14, 36],
-            [36, 49],
-            [49, 76],
-            [76, 98],
-            [98, 124],
-            [124, 143]
-        ]
-    };
-
-    videoControls(video, videoTimestamps);
-
-    stepHighlight(video, videoTimestamps);
-
-    stepClicks(video, videoTimestamps);
+    
 });
 
 function stepClicks(video, timeStamps) {
-    //TODO (QUANDO METERMOS OUTROS VIDS): verficar primeiro qual current vid
-    console.log("STEP CLICKS");
 
+    //TODO (QUANDO METERMOS OUTROS VIDS): verficar primeiro qual current vid
+    //console.log(window.video);   
+   
     $(".img-step.ingredients, .txt-step.ingredients").click(function () {
         video.currentTime = timeStamps.sopa[0][0];
     });
@@ -41,7 +25,9 @@ function stepClicks(video, timeStamps) {
     $(".img-step.six, .txt-step.six").click(function () {
         video.currentTime = timeStamps.sopa[5][0];
     });
+
 }
+
 
 function videoControls(video, videoTimestamps) {
     //PLAY PAUSE
@@ -123,6 +109,6 @@ function stepHighlight(video, videoTimestamps) {
         } else {
             $(".img-step.six, .txt-step.six").css("opacity", "0.3");
         }
+    
     });
 }
-  

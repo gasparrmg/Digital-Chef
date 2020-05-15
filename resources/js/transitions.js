@@ -168,22 +168,22 @@ $(document).ready(function () {
 
     switch (window.video) {
       case "sopa":
-        $(".image-gallery-wrapper").fadeOut(1000, function () {
+        $("#images-soup").fadeOut(1000, function () {
           $("#text-soup").fadeIn(1000);
         });
         break;
       case "vegan":
-        $(".image-gallery-wrapper").fadeOut(1000, function () {
+        $("#images-vegan").fadeOut(1000, function () {
           $("#text-vegan").fadeIn(1000);
         });
         break;
       case "meat":
-        $(".image-gallery-wrapper").fadeOut(1000, function () {
+        $("#images-meat").fadeOut(1000, function () {
           $("#text-meat").fadeIn(1000);
         });
         break;
       case "desert":
-        $(".image-gallery-wrapper").fadeOut(1000, function () {
+        $("#images-desert").fadeOut(1000, function () {
           $("#text-desert").fadeIn(1000);
         });
         break;
@@ -210,23 +210,23 @@ $(document).ready(function () {
 
     switch (window.video) {
       case "sopa":
-        $(".text-section-wrapper").fadeOut(1000, function () {
+        $("#text-soup").fadeOut(1000, function () {
           $("#images-soup").fadeIn(1000);
         });
         break;
       case "vegan":
-        $(".text-section-wrapper").fadeOut(1000, function () {
+        $("#text-vegan").fadeOut(1000, function () {
           $("#images-vegan").fadeIn(1000);
         });
         break;
       case "meat":
-        $(".text-section-wrapper").fadeOut(500, function () {
-          $("#images-meat").fadeIn(500);
+        $("#text-meat").fadeOut(1000, function () {
+          $("#images-meat").fadeIn(1000);
         });
         break;
       case "desert":
-        $(".text-section-wrapper").fadeOut(500, function () {
-          $("#images-desert").fadeIn(500);
+        $("#text-desert").fadeOut(1000, function () {
+          $("#images-desert").fadeIn(1000);
         });
         break;
     }

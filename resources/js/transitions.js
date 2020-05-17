@@ -22,7 +22,7 @@ function detectVideo(event, CURRENT) {
   ) {
     window.video = "desert";
   }
-
+////// START- initialization part for synchro VIDEO<-> IMAGE <-> TEST
   let video = $("#main-video").get(0);
   var videoTimestamps = {
       sopa: [
@@ -33,10 +33,11 @@ function detectVideo(event, CURRENT) {
           [98, 124],
           [124, 143]
       ],
+      
       vegan: [
-          [14, 44],
-          [44, 57],
-          [57, 82],
+          [14, 45],
+          [45, 58],
+          [58, 82],
           [82, 110],
           [110, 121],
           [121, 136],
@@ -56,6 +57,9 @@ function detectVideo(event, CURRENT) {
   stepHighlight(video, videoTimestamps);
 
   stepClicks(video, videoTimestamps);
+
+  ////// END- initialization part for synchro VIDEO<-> IMAGE <-> TEST
+
 
   console.log(window.video);
  

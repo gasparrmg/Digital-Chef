@@ -1,4 +1,6 @@
-function detectVideo(event) {
+
+function detectVideo(event, CURRENT) {
+  
   if (
     event.target.id == "dish-card-sopa" ||
     event.target.id == "dish-card-sopa-img"
@@ -20,12 +22,82 @@ function detectVideo(event) {
   ) {
     window.video = "desert";
   }
+////// START- initialization part for synchro VIDEO<-> IMAGE <-> TEST
+  let video = $("#main-video").get(0);
+  var videoTimestamps = {
+      sopa: [
+          [14, 36],
+          [36, 49],
+          [49, 76],
+          [76, 98],
+          [98, 124],
+          [124, 143]
+      ],
+      
+      vegan: [
+          [15, 45],
+          [45, 58],
+          [58, 82],
+          [82, 110],
+          [110, 121],
+          [121, 136],
+          [136, 164],
+          [164, 180],
+          [180, 200],
+          [200, 210],
+          [210, 228],
+          [228, 263],
+          [263, 284]
+      ],
+
+      meat: [
+          [20, 52],
+          [52, 87],
+          [87, 100],
+          [100, 120],
+          [120, 139],
+          [139, 159],
+          [159, 172],
+          [172, 187],
+          [187, 209],
+          [209, 236],
+          [236, 251],
+          [251, 277],
+          [277, 290]
+      ], 
+    
+      desert: [
+          [21, 47],
+          [47, 69],
+          [69, 88],
+          [88, 126],
+          [126, 139],
+          [139, 148],
+          [148, 181],
+          [181, 188],
+          [188, 215]
+      ]
+  };
+
+
+  videoControls(video, videoTimestamps);
+
+  stepHighlight(video, videoTimestamps);
+
+  stepClicks(video, videoTimestamps);
+
+  ////// END- initialization part for synchro VIDEO<-> IMAGE <-> TEST
+
+
+  console.log(window.video);
+ 
+
 }
 
 $(document).ready(function () {
   $(".dish-list.homepage .dish-card a").click(function (event) {
     detectVideo(event);
-    console.log(window.video);
+    //console.log(window.video);
 
     $(".cta-promo-video-btn").fadeOut(100);
 
@@ -163,6 +235,7 @@ $(document).ready(function () {
   // ----------------------------------------------------
 
   // - SWITCH BETWEEN IMAGES OR TEXT ---------------------
+  
   $("#btn-text").click(function (e) {
     e.preventDefault();
 
@@ -173,19 +246,23 @@ $(document).ready(function () {
         });
         break;
       case "vegan":
-        $("#images-vegan").fadeOut(1000, function () {
+          $("#images-vegan").fadeOut(1000, function () {
           $("#text-vegan").fadeIn(1000);
         });
         break;
       case "meat":
-        $("#images-meat").fadeOut(1000, function () {
+        $("#images-meat").fadeOut(1000, function(){
           $("#text-meat").fadeIn(1000);
-        });
+      });
+        
         break;
+
       case "desert":
         $("#images-desert").fadeOut(1000, function () {
           $("#text-desert").fadeIn(1000);
+
         });
+
         break;
     }
 
@@ -220,9 +297,9 @@ $(document).ready(function () {
         });
         break;
       case "meat":
-        $("#text-meat").fadeOut(1000, function () {
+        $("#text-meat").fadeOut(1000,function(){
           $("#images-meat").fadeIn(1000);
-        });
+      });
         break;
       case "desert":
         $("#text-desert").fadeOut(1000, function () {
@@ -244,7 +321,9 @@ $(document).ready(function () {
         opacity: 1,
       },
       500
-    );
+    ); 
+
+    $("#btn-images").click()
   });
   //-------------------------------------------------------
 });

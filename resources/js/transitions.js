@@ -1,4 +1,3 @@
-
 function detectVideo(event, CURRENT) {
   
   if (
@@ -95,13 +94,87 @@ function detectVideo(event, CURRENT) {
 }
 
 $(document).ready(function () {
+  $(".select-recipe a").click(function(e) {
+    e.preventDefault();
+
+    if ($(".select-recipe").hasClass("select")) {
+      console.log("SELECT");
+
+      $(".select-recipe p").fadeOut(500, function() {
+        $(".select-recipe p").text("GO BACK");
+        $(".select-recipe p").fadeIn(500);
+      });
+  
+      $(".start-button").fadeOut(500, function() {
+        $(".dish-list.homepage").css("display", "flex").hide().fadeIn(1000);
+      });
+  
+      $(".select-recipe").removeClass("select");
+      $(".select-recipe").addClass("back");
+    }
+
+    else if ($(".select-recipe").hasClass("back")) {
+      console.log("BACK");
+      $(".select-recipe p").fadeOut(500, function() {
+        $(".select-recipe p").text("Select a recipe");
+        $(".select-recipe p").fadeIn(500);
+      });
+  
+      $(".dish-list.homepage").fadeOut(500, function() {
+        $(".start-button").fadeIn(1000);
+      });
+  
+      $(".select-recipe").removeClass("back");
+      $(".select-recipe").addClass("select");
+    }
+  });
+
+  $(".start-button.homepage").click(function() {
+    $(".cta-promo-video-btn").fadeOut(1000, function() {
+      $(".cta-promo-video-btn").css("display", "hidden");
+    });
+
+    $(".select-recipe").fadeOut(1000, function() {
+      $(".select-recipe").css("display", "hidden");
+    });
+
+    $(".start-button img").fadeOut(1000, function() {
+      $(".start-button img").replaceWith("<h1>5</h1>");
+      $(".start-button h1").css("display", "block");
+
+      var counter = 5;
+      var interval = setInterval(function() {
+        counter--;
+
+        if (counter < 0) {
+          //go soup
+          clearInterval(interval);
+          window.video = "sopa";
+          $(".select-recipe a").trigger("click").delay(500);
+
+          setTimeout(function() {
+            $("#dish-card-sopa-img").trigger("click");
+          }, 1500);
+        } else {
+          $(".start-button h1").text(counter);
+          //console.log("Timer --> " + counter);
+        }
+      }, 1000);
+    });
+  });
+
   $(".dish-list.homepage .dish-card a").click(function (event) {
     detectVideo(event);
     //console.log(window.video);
+    //console.log("sup");
 
     $(".cta-promo-video-btn").fadeOut(100);
+    $(".select-recipe").fadeOut(100);
 
     $(".dish-list.homepage .dish-card").css("margin", "0px");
+    
+    $(".dish-list .dish-name").css("display", "none");
+
 
     $(".dish-list.homepage").animate(
       {

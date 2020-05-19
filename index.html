@@ -48,10 +48,23 @@
         alt="Digital Chef Logo"
       />
       <h1>Digital Chef</h1>
-      <div class="container">
+      <div class="container homepage">
+        <div class="start-button homepage row">
+          <div class="col-md-12">
+            <a class="text-decoration-none" href="#">
+              <img
+                id="play-btn-homepage"
+                class="rounded mx-auto d-block"
+                src="./resources/img/play_btn.svg"
+                alt="Image Play"
+              />
+              <h2 style="font-size: 20px;">Start experience</h2>
+            </a>
+          </div>
+        </div>
         <div class="dish-list homepage row">
           <div class="dish-card col-sm" id="dish-card">
-            <a class="text-decoration-none" href="#" class="dish-card-sopa">
+            <a class="text-decoration-none dish-card-sopa" href="#">
               <img
                 id="dish-card-sopa-img"
                 class="rounded mx-auto d-block"
@@ -112,6 +125,9 @@
         >
           <span>Vídeo promocional</span>
         </button>
+      </div>
+      <div class="text-center select-recipe select">
+        <a class="text-decoration-none" href="#"><p>Select a recipe</p></a>
       </div>
       <div class="modal fade" id="exampleModalCenter">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -889,7 +905,7 @@
                     Coloce o feijão numa tigela e triture com uma varinha màgica até que fique puré.
                   </li>
                   <li class="txt-step three">
-                    Na picadora ou num processador, coloque o pão, 
+                    Na picadora ou num processador, coloque o pão,
                     metade da cebola, metade dos alhos e a salsa.
                     <br/>
                     Triture tudo muito bem.
@@ -910,10 +926,10 @@
                     Passe as almôndegas pela farinha de mandioca e coloque numa travessa.
                   </li>
                   <li class="txt-step seven">
-                    Entretanto faça o molho. Num tacho, leve ao lume 2 colheres de sopa 
+                    Entretanto faça o molho. Num tacho, leve ao lume 2 colheres de sopa
                     de azeite, a restante cebola, os restantes alhos e o louro.
                     <br />
-                    Mexa e deixe refogar sem deixar alourar. 
+                    Mexa e deixe refogar sem deixar alourar.
                   </li>
                   <li class="txt-step eight">
                     Logo que a cebola fique vidrada, junte o pimento e a malagueta.
@@ -938,7 +954,7 @@
                     Entretanto frite as almôndegas.
                     <br>
                     Numa frigideira leve ao lume 4 colheres de sopa de azeite e quando estiver bem quente,
-                    coloque as almôndegas e frite-as por igual.    
+                    coloque as almôndegas e frite-as por igual.
                   </li>
                   <li class="txt-step thirteen">
                     A meio da fritura, regue as almôndegas com a restante colher de sopa de azeite.
@@ -1435,7 +1451,7 @@
                     Num tacho leve ao lume a cebola e a margarina. Deixe refogar.
                   </li>
                   <li class="txt-step four">
-                    Quando a cebola estiver quase refogada, junte os alhos picados 
+                    Quando a cebola estiver quase refogada, junte os alhos picados
                     e as folhas de louro.
                   </li>
                   <li class="txt-step five">
@@ -1452,7 +1468,7 @@
                     Numa taça dissolva a farinha maizena com o leite e mexa.
                   </li>
                   <li class="txt-step nine">
-                    Ao frango, junte 2 colheres de polpa de tomate e a colher de sopa 
+                    Ao frango, junte 2 colheres de polpa de tomate e a colher de sopa
                     de ketchup. Mexa tudo.
                   </li>
                   <li class="txt-step ten">
@@ -1776,11 +1792,11 @@
                     Verta o preparado na forma.
                   </li>
                   <li class="txt-step seven">
-                    Leve ao forno pré-aqueçido nos 200°C e deixe cozer durante 15 min. 
+                    Leve ao forno pré-aqueçido nos 200°C e deixe cozer durante 15 min.
                     <br>
                     Caso queira o bolo mais cozido, deixe 20 min.
                     <br>
-                    Logo que o bolo esteja cozido por fora, retire-o. 
+                    Logo que o bolo esteja cozido por fora, retire-o.
                     <br>
                     Pode comer o bolo quente ou frio, mas para deseformarem convém que esteja frio.
                   </li>
@@ -1847,7 +1863,7 @@
     </div>
 
     <!-- <script>
-			$(".dish-list.homepage .dish-card a").click(function (e) { 
+			$(".dish-list.homepage .dish-card a").click(function (e) {
     			e.preventDefault();
     			console.log("IM HERE");
     			$(".homepage-wrapper").fadeOut(1000, function() {

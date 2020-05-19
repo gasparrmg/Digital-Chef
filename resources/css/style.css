@@ -72,6 +72,32 @@ h5 {
 .dish-list.homepage {
   margin: 30px 0px 40px 0px;
   min-height: 310px;
+  display:none;
+}
+
+.start-button.homepage img{
+  width: 200px;
+}
+
+.start-button h1 {
+  font-size: 167px; 
+  margin-bottom: 25px;
+  display: none;
+}
+
+.start-button.homepage {
+  margin: 30px 0px 40px 0px;
+  transition: 0.3s;
+  min-height: 310px;
+  display: block;
+}
+
+.start-button.homepage:hover {
+  opacity: 0.8;
+}
+
+#play-btn-homepage {
+  margin-bottom: 25px;
 }
 
 .dish-list.videopage {
@@ -89,6 +115,11 @@ h5 {
   border: 0px;
   border: 0px;
   padding: 15px 30px;
+  transition: 0.3s;
+}
+
+.cta-promo-video-btn:hover {
+  opacity: 0.8;
 }
 
 .cta-promo-video-btn span {
@@ -96,7 +127,7 @@ h5 {
   font-weight: 600;
   color: #ff4d00;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .homepage-wrapper {
@@ -137,6 +168,13 @@ h5 {
 #btn-text h2 {
   color: #000000;
   opacity: 0.5;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  color: #f7f7f7;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .text-section-wrapper {
@@ -199,6 +237,10 @@ h5 {
 
 li.txt-step {
   cursor: pointer;
+}
+
+.select-recipe {
+ margin-top: 25px;
 }
 
 /* --------ANIMATIONS-------- */

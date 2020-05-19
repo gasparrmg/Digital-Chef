@@ -130,6 +130,13 @@ $(document).ready(function () {
   });
 
   $(".start-button.homepage").click(function() {
+    $(".cta-promo-video-btn").fadeOut(1000, function() {
+      $(".cta-promo-video-btn").css("display", "hidden");
+    });
+
+    $(".select-recipe").fadeOut(1000, function() {
+      $(".select-recipe").css("display", "hidden");
+    });
 
     $(".start-button img").fadeOut(1000, function() {
       $(".start-button img").replaceWith("<h1>5</h1>");

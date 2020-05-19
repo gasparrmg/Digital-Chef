@@ -172,6 +172,9 @@ $(document).ready(function () {
     $(".select-recipe").fadeOut(100);
 
     $(".dish-list.homepage .dish-card").css("margin", "0px");
+    
+    $(".dish-list .dish-name").css("display", "none");
+
 
     $(".dish-list.homepage").animate(
       {

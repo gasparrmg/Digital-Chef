@@ -217,6 +217,14 @@ $(document).ready(function () {
               "./resources/video/Sopa de Legumes com Feijão Branco e Espinafres.mp4"
             );
 
+            $("#listaingredientes")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/img/receitas/receitasopa.jpg"
+            );
+
+          
           $("#dish-title").text(
             "Sopa de Legumes com Feijão Branco e Espinafres"
           );
@@ -239,6 +247,13 @@ $(document).ready(function () {
             .setAttribute(
               "src",
               "./resources/video/Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento.mp4"
+            ); 
+
+            $("#listaingredientes")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/img/receitas/receitavegan.jpg"
             );
 
           $("#dish-title").text(
@@ -261,6 +276,13 @@ $(document).ready(function () {
             .get(0)
             .setAttribute("src", "./resources/video/Strogonoff de Frango.mp4");
 
+            $("#listaingredientes")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/img/receitas/receitacarne.jpg"
+            );
+
           $("#dish-title").text("Strogonoff de Frango");
 
           $(".videopage-wrapper").fadeIn(1500, function () {
@@ -280,6 +302,13 @@ $(document).ready(function () {
             .setAttribute(
               "src",
               "./resources/video/Bolo Mousse de Chocolate.mp4"
+            );
+
+            $("#listaingredientes")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/img/receitas/receitadesert.jpg"
             );
 
           $("#dish-title").text("Bolo Mousse de Chocolate");

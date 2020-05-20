@@ -429,6 +429,10 @@ $(document).ready(function () {
               "./resources/video/Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento.mp4"
             );
 
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
+
           //Switch right side
           if ($("#images-soup").css("display") != "none") {
             $("#images-soup").fadeOut(1000, function () {
@@ -455,6 +459,10 @@ $(document).ready(function () {
             .get(0)
             .setAttribute("src", "./resources/video/Strogonoff de Frango.mp4");
 
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
+
           if ($("#images-vegan").css("display") != "none") {
             $("#images-vegan").fadeOut(1000, function () {
               $("#images-meat").fadeIn(1000);
@@ -475,6 +483,10 @@ $(document).ready(function () {
               $(this).text("Bolo Mousse de Chocolate");
             })
             .animate({ opacity: 1 }, 1000);
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitadesert.jpg");
 
           $("#main-video")
             .get(0)
@@ -504,6 +516,10 @@ $(document).ready(function () {
               $(this).text("Sopa de Legumes com Feijão Branco e Espinafres");
             })
             .animate({ opacity: 1 }, 1000);
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitasopa.jpg");
 
           $("#main-video")
             .get(0)

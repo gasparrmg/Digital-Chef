@@ -4,7 +4,7 @@ function stepClicks(video, timeStamps) {
   //TODO (QUANDO METERMOS OUTROS VIDS): verficar primeiro qual current vid
   //console.log(window.video);
   if (window.video == "sopa") {
-    console.log("FIRST IF " + window.video);
+    //console.log("FIRST IF " + window.video);
 
     $(".img-step.ingredients, .txt-step.ingredients").click(function () {
       video.currentTime = timeStamps.sopa[0][0];
@@ -67,7 +67,7 @@ function stepClicks(video, timeStamps) {
       video.currentTime = timeStamps.vegan[12][0];
     });
   } else if (window.video == "meat") {
-    console.log("FIRST IF " + window.video);
+    //console.log("FIRST IF " + window.video);
 
     $(".img-step.ingredients, .txt-step.ingredients").click(function () {
       video.currentTime = timeStamps.meat[0][0];
@@ -109,7 +109,7 @@ function stepClicks(video, timeStamps) {
       video.currentTime = timeStamps.meat[12][0];
     });
   } else if (window.video == "desert") {
-    console.log("FIRST IF " + window.video);
+    //console.log("FIRST IF " + window.video);
 
     $(".img-step.ingredients, .txt-step.ingredients").click(function () {
       video.currentTime = timeStamps.desert[0][0];
@@ -143,6 +143,7 @@ function stepClicks(video, timeStamps) {
 
 function videoControls(video, videoTimestamps) {
   //PLAY PAUSE
+  $("#btn_play").unbind("click");
   $("#btn_play").on("click", function () {
     if (video.paused) {
       video.play();
@@ -160,13 +161,14 @@ function videoControls(video, videoTimestamps) {
   });
 
   //NEXT STEP
+  $("#btn-next-step").unbind("click");
   $("#btn-next-step").click(function () {
     //TODO: CHECK CURRENT RECIPE
 
     //IF SOPA
 
     if (window.video == "sopa") {
-      console.log("SECOND IF " + window.video);
+      //console.log("SECOND IF " + window.video);
 
       for (var i = 0; i < videoTimestamps.sopa.length - 1; i++) {
         if (
@@ -178,7 +180,7 @@ function videoControls(video, videoTimestamps) {
         }
       }
     } else if (window.video == "vegan") {
-      console.log("SECOND IF " + window.video);
+      //console.log("SECOND IF " + window.video);
 
       for (var i = 0; i < videoTimestamps.vegan.length - 1; i++) {
         if (
@@ -190,7 +192,7 @@ function videoControls(video, videoTimestamps) {
         }
       }
     } else if (window.video == "meat") {
-      console.log("SECOND IF " + window.video);
+      //console.log("SECOND IF " + window.video);
 
       for (var i = 0; i < videoTimestamps.meat.length - 1; i++) {
         if (
@@ -202,7 +204,7 @@ function videoControls(video, videoTimestamps) {
         }
       }
     } else if (window.video == "desert") {
-      console.log("SECOND IF " + window.video);
+      //console.log("SECOND IF " + window.video);
 
       for (var i = 0; i < videoTimestamps.desert.length - 1; i++) {
         if (
@@ -217,13 +219,14 @@ function videoControls(video, videoTimestamps) {
   });
 
   //PREV STEP
+  $("#btn-prev-step").unbind("click");
   $("#btn-prev-step").click(function () {
     //TODO: CHECK CURRENT RECIPE
 
     //IF SOPA
 
     if (window.video == "sopa") {
-      console.log("THIRD IF " + window.video);
+      //console.log("THIRD IF " + window.video);
 
       for (var i = 1; i < videoTimestamps.sopa.length; i++) {
         if (
@@ -235,7 +238,7 @@ function videoControls(video, videoTimestamps) {
         }
       }
     } else if (window.video == "vegan") {
-      console.log("THIRD IF " + window.video);
+      //console.log("THIRD IF " + window.video);
 
       for (var i = 1; i < videoTimestamps.vegan.length; i++) {
         if (
@@ -247,7 +250,7 @@ function videoControls(video, videoTimestamps) {
         }
       }
     } else if (window.video == "meat") {
-      console.log("THIRD IF " + window.video);
+      //console.log("THIRD IF " + window.video);
 
       for (var i = 1; i < videoTimestamps.meat.length; i++) {
         if (
@@ -259,7 +262,7 @@ function videoControls(video, videoTimestamps) {
         }
       }
     } else if (window.video == "desert") {
-      console.log("THIRD IF " + window.video);
+      //console.log("THIRD IF " + window.video);
 
       for (var i = 1; i < videoTimestamps.desert.length; i++) {
         if (
@@ -283,7 +286,7 @@ function stepHighlight(video, videoTimestamps) {
     //TODO (QUANDO METERMOS OUTROS VIDS): verficar primeiro qual current vid
 
     if (window.video == "sopa") {
-      console.log("FOURTH IF " + window.video);
+      //console.log("FOURTH IF " + window.video);
 
       if (
         video.currentTime >= videoTimestamps.sopa[0][0] &&

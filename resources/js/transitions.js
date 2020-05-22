@@ -545,7 +545,12 @@ $(document).ready(function () {
       }
 
       //Update highlights, animations, etc
-      let video = $("#main-video").get(0);
+      $("#btn_play img").attr(
+        "src",
+        "./resources/img/video-controls/btn_pause.svg"
+      );
+
+      var video = $("#main-video").get(0);
       var videoTimestamps = {
         sopa: [
           [14, 36],
@@ -609,7 +614,7 @@ $(document).ready(function () {
     }
   }
 
-  $("#main-video").on("ended", () => {
+  $("#main-video").on("ended", function () {
     setTimeout(nextVideo, 3000);
   });
 
@@ -754,7 +759,12 @@ $(document).ready(function () {
       }
 
       //Update highlights, animations, etc
-      let video = $("#main-video").get(0);
+      $("#btn_play img").attr(
+        "src",
+        "./resources/img/video-controls/btn_pause.svg"
+      );
+
+      var video = $("#main-video").get(0);
       var videoTimestamps = {
         sopa: [
           [14, 36],

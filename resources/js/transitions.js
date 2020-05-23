@@ -118,8 +118,7 @@ function detectVideo(event, CURRENT) {
       ]
   };
 
-  recipeHighlight(video);
-
+ 
   videoControls(video, videoTimestamps);
 
   stepHighlight(video, videoTimestamps);

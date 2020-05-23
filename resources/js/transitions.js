@@ -1,5 +1,4 @@
 function detectVideo(event, CURRENT) {
-  
   if (
     event.target.id == "dish-card-sopa" ||
     event.target.id == "dish-card-sopa-img"
@@ -21,63 +20,62 @@ function detectVideo(event, CURRENT) {
   ) {
     window.video = "desert";
   }
-////// START- initialization part for synchro VIDEO<-> IMAGE <-> TEST
+  ////// START- initialization part for synchro VIDEO<-> IMAGE <-> TEST
   let video = $("#main-video").get(0);
   var videoTimestamps = {
-      sopa: [
-          [14, 36],
-          [36, 49],
-          [49, 76],
-          [76, 98],
-          [98, 124],
-          [124, 143]
-      ],
-      
-      vegan: [
-          [15, 45],
-          [45, 58],
-          [58, 82],
-          [82, 110],
-          [110, 121],
-          [121, 136],
-          [136, 164],
-          [164, 180],
-          [180, 200],
-          [200, 210],
-          [210, 228],
-          [228, 263],
-          [263, 284]
-      ],
+    sopa: [
+      [14, 36],
+      [36, 49],
+      [49, 76],
+      [76, 98],
+      [98, 124],
+      [124, 143],
+    ],
 
-      meat: [
-          [20, 52],
-          [52, 87],
-          [87, 100],
-          [100, 120],
-          [120, 139],
-          [139, 159],
-          [159, 172],
-          [172, 187],
-          [187, 209],
-          [209, 236],
-          [236, 251],
-          [251, 277],
-          [277, 290]
-      ], 
-    
-      desert: [
-          [21, 47],
-          [47, 69],
-          [69, 88],
-          [88, 126],
-          [126, 139],
-          [139, 148],
-          [148, 181],
-          [181, 188],
-          [188, 215]
-      ]
+    vegan: [
+      [15, 45],
+      [45, 58],
+      [58, 82],
+      [82, 110],
+      [110, 121],
+      [121, 136],
+      [136, 164],
+      [164, 180],
+      [180, 200],
+      [200, 210],
+      [210, 228],
+      [228, 263],
+      [263, 284],
+    ],
+
+    meat: [
+      [20, 52],
+      [52, 87],
+      [87, 100],
+      [100, 120],
+      [120, 139],
+      [139, 159],
+      [159, 172],
+      [172, 187],
+      [187, 209],
+      [209, 236],
+      [236, 251],
+      [251, 277],
+      [277, 290],
+    ],
+
+    desert: [
+      [21, 47],
+      [47, 69],
+      [69, 88],
+      [88, 126],
+      [126, 139],
+      [139, 148],
+      [148, 181],
+      [181, 188],
+      [188, 215],
+    ],
   };
-
 
   videoControls(video, videoTimestamps);
 
@@ -87,63 +85,58 @@ function detectVideo(event, CURRENT) {
 
   ////// END- initialization part for synchro VIDEO<-> IMAGE <-> TEST
 
-
   console.log(window.video);
- 
-
 }
 
 $(document).ready(function () {
-  $(".select-recipe a").click(function(e) {
+  $(".select-recipe a").click(function (e) {
     e.preventDefault();
 
     if ($(".select-recipe").hasClass("select")) {
       console.log("SELECT");
 
-      $(".select-recipe p").fadeOut(500, function() {
+      $(".select-recipe p").fadeOut(500, function () {
         $(".select-recipe p").text("GO BACK");
         $(".select-recipe p").fadeIn(500);
       });
-  
-      $(".start-button").fadeOut(500, function() {
+
+      $(".start-button").fadeOut(500, function () {
         $(".dish-list.homepage").css("display", "flex").hide().fadeIn(1000);
       });
-  
+
       $(".select-recipe").removeClass("select");
       $(".select-recipe").addClass("back");
-    }
-
-    else if ($(".select-recipe").hasClass("back")) {
+    } else if ($(".select-recipe").hasClass("back")) {
       console.log("BACK");
-      $(".select-recipe p").fadeOut(500, function() {
+      $(".select-recipe p").fadeOut(500, function () {
         $(".select-recipe p").text("Select a recipe");
         $(".select-recipe p").fadeIn(500);
       });
-  
-      $(".dish-list.homepage").fadeOut(500, function() {
+
+      $(".dish-list.homepage").fadeOut(500, function () {
         $(".start-button").fadeIn(1000);
       });
-  
+
       $(".select-recipe").removeClass("back");
       $(".select-recipe").addClass("select");
     }
   });
 
-  $(".start-button.homepage").click(function() {
-    $(".cta-promo-video-btn").fadeOut(1000, function() {
+  $(".start-button.homepage").click(function () {
+    $(".cta-promo-video-btn").fadeOut(1000, function () {
       $(".cta-promo-video-btn").css("display", "hidden");
     });
 
-    $(".select-recipe").fadeOut(1000, function() {
+    $(".select-recipe").fadeOut(1000, function () {
       $(".select-recipe").css("display", "hidden");
     });
 
-    $(".start-button img").fadeOut(1000, function() {
+    $(".start-button img").fadeOut(1000, function () {
       $(".start-button img").replaceWith("<h1>5</h1>");
       $(".start-button h1").css("display", "block");
 
       var counter = 5;
-      var interval = setInterval(function() {
+      var interval = setInterval(function () {
         counter--;
 
         if (counter < 0) {
@@ -152,7 +145,7 @@ $(document).ready(function () {
           window.video = "sopa";
           $(".select-recipe a").trigger("click").delay(500);
 
-          setTimeout(function() {
+          setTimeout(function () {
             $("#dish-card-sopa-img").trigger("click");
           }, 1500);
         } else {
@@ -172,9 +165,8 @@ $(document).ready(function () {
     $(".select-recipe").fadeOut(100);
 
     $(".dish-list.homepage .dish-card").css("margin", "0px");
-    
-    $(".dish-list .dish-name").css("display", "none");
 
+    $(".dish-list .dish-name").css("display", "none");
 
     $(".dish-list.homepage").animate(
       {
@@ -217,6 +209,10 @@ $(document).ready(function () {
               "./resources/video/Sopa de Legumes com Feijão Branco e Espinafres.mp4"
             );
 
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitasopa.jpg");
+
           $("#dish-title").text(
             "Sopa de Legumes com Feijão Branco e Espinafres"
           );
@@ -241,6 +237,10 @@ $(document).ready(function () {
               "./resources/video/Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento.mp4"
             );
 
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
+
           $("#dish-title").text(
             "Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento"
           );
@@ -260,6 +260,10 @@ $(document).ready(function () {
           $("#main-video")
             .get(0)
             .setAttribute("src", "./resources/video/Strogonoff de Frango.mp4");
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
 
           $("#dish-title").text("Strogonoff de Frango");
 
@@ -281,6 +285,10 @@ $(document).ready(function () {
               "src",
               "./resources/video/Bolo Mousse de Chocolate.mp4"
             );
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitadesert.jpg");
 
           $("#dish-title").text("Bolo Mousse de Chocolate");
 
@@ -308,7 +316,7 @@ $(document).ready(function () {
   // ----------------------------------------------------
 
   // - SWITCH BETWEEN IMAGES OR TEXT ---------------------
-  
+
   $("#btn-text").click(function (e) {
     e.preventDefault();
 
@@ -319,21 +327,20 @@ $(document).ready(function () {
         });
         break;
       case "vegan":
-          $("#images-vegan").fadeOut(1000, function () {
+        $("#images-vegan").fadeOut(1000, function () {
           $("#text-vegan").fadeIn(1000);
         });
         break;
       case "meat":
-        $("#images-meat").fadeOut(1000, function(){
+        $("#images-meat").fadeOut(1000, function () {
           $("#text-meat").fadeIn(1000);
-      });
-        
+        });
+
         break;
 
       case "desert":
         $("#images-desert").fadeOut(1000, function () {
           $("#text-desert").fadeIn(1000);
-
         });
 
         break;
@@ -370,9 +377,9 @@ $(document).ready(function () {
         });
         break;
       case "meat":
-        $("#text-meat").fadeOut(1000,function(){
+        $("#text-meat").fadeOut(1000, function () {
           $("#images-meat").fadeIn(1000);
-      });
+        });
         break;
       case "desert":
         $("#text-desert").fadeOut(1000, function () {
@@ -394,9 +401,432 @@ $(document).ready(function () {
         opacity: 1,
       },
       500
-    ); 
+    );
 
-    $("#btn-images").click()
+    $("#btn-images").click();
   });
   //-------------------------------------------------------
+
+  //Skip to next video-------------------------------------
+  function nextVideo() {
+    //Prevent fast clicks that can break animation
+    if ($("#dish-title").css("opacity") == 1) {
+      switch (window.video) {
+        case "sopa":
+          //Switch video section and title
+          $("#dish-title")
+            .animate({ opacity: 0 }, 1000, function () {
+              $(this).text(
+                "Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento"
+              );
+            })
+            .animate({ opacity: 1 }, 1000);
+
+          $("#main-video")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/video/Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento.mp4"
+            );
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
+
+          //Switch right side
+          if ($("#images-soup").css("display") != "none") {
+            $("#images-soup").fadeOut(1000, function () {
+              $("#images-vegan").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          } else {
+            $("#text-soup").fadeOut(1000, function () {
+              $("#text-vegan").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          }
+
+          window.video = "vegan";
+          break;
+        case "vegan":
+          $("#dish-title")
+            .animate({ opacity: 0 }, 1000, function () {
+              $(this).text("Strogonoff de Frango");
+            })
+            .animate({ opacity: 1 }, 1000);
+
+          $("#main-video")
+            .get(0)
+            .setAttribute("src", "./resources/video/Strogonoff de Frango.mp4");
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
+
+          if ($("#images-vegan").css("display") != "none") {
+            $("#images-vegan").fadeOut(1000, function () {
+              $("#images-meat").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          } else {
+            $("#text-vegan").fadeOut(1000, function () {
+              $("#text-meat").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          }
+
+          window.video = "meat";
+          break;
+        case "meat":
+          $("#dish-title")
+            .animate({ opacity: 0 }, 1000, function () {
+              $(this).text("Bolo Mousse de Chocolate");
+            })
+            .animate({ opacity: 1 }, 1000);
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitadesert.jpg");
+
+          $("#main-video")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/video/Bolo Mousse de Chocolate.mp4"
+            );
+
+          if ($("#images-meat").css("display") != "none") {
+            $("#images-meat").fadeOut(1000, function () {
+              $("#images-desert").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          } else {
+            $("#text-meat").fadeOut(1000, function () {
+              $("#text-desert").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          }
+
+          window.video = "desert";
+          break;
+
+        case "desert":
+          $("#dish-title")
+            .animate({ opacity: 0 }, 1000, function () {
+              $(this).text("Sopa de Legumes com Feijão Branco e Espinafres");
+            })
+            .animate({ opacity: 1 }, 1000);
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitasopa.jpg");
+
+          $("#main-video")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/video/Sopa de Legumes com Feijão Branco e Espinafres.mp4"
+            );
+
+          if ($("#images-desert").css("display") != "none") {
+            $("#images-desert").fadeOut(1000, function () {
+              $("#images-soup").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          } else {
+            $("#text-desert").fadeOut(1000, function () {
+              $("#text-soup").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          }
+
+          window.video = "sopa";
+          break;
+      }
+
+      //Update highlights, animations, etc
+      $("#btn_play img").attr(
+        "src",
+        "./resources/img/video-controls/btn_pause.svg"
+      );
+
+      var video = $("#main-video").get(0);
+      var videoTimestamps = {
+        sopa: [
+          [14, 36],
+          [36, 49],
+          [49, 76],
+          [76, 98],
+          [98, 124],
+          [124, 143],
+        ],
+
+        vegan: [
+          [15, 45],
+          [45, 58],
+          [58, 82],
+          [82, 110],
+          [110, 121],
+          [121, 136],
+          [136, 164],
+          [164, 180],
+          [180, 200],
+          [200, 210],
+          [210, 228],
+          [228, 263],
+          [263, 284],
+        ],
+
+        meat: [
+          [20, 52],
+          [52, 87],
+          [87, 100],
+          [100, 120],
+          [120, 139],
+          [139, 159],
+          [159, 172],
+          [172, 187],
+          [187, 209],
+          [209, 236],
+          [236, 251],
+          [251, 277],
+          [277, 290],
+        ],
+
+        desert: [
+          [21, 47],
+          [47, 69],
+          [69, 88],
+          [88, 126],
+          [126, 139],
+          [139, 148],
+          [148, 181],
+          [181, 188],
+          [188, 215],
+        ],
+      };
+
+      videoControls(video, videoTimestamps);
+
+      stepHighlight(video, videoTimestamps);
+
+      stepClicks(video, videoTimestamps);
+    }
+  }
+
+  $("#main-video").on("ended", function () {
+    setTimeout(nextVideo, 3000);
+  });
+
+  $("#btn-next-recipe").on("click", nextVideo);
+
+  function prevVideo() {
+    //Prevent fast clicks that can break animation
+    if ($("#dish-title").css("opacity") == 1) {
+      switch (window.video) {
+        case "sopa":
+          //Switch video section and title
+          $("#dish-title")
+            .animate({ opacity: 0 }, 1000, function () {
+              $(this).text("Bolo Mousse de Chocolate");
+            })
+            .animate({ opacity: 1 }, 1000);
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitadesert.jpg");
+
+          $("#main-video")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/video/Bolo Mousse de Chocolate.mp4"
+            );
+
+          //Switch right side
+          if ($("#images-soup").css("display") != "none") {
+            $("#images-soup").fadeOut(1000, function () {
+              $("#images-desert").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          } else {
+            $("#text-soup").fadeOut(1000, function () {
+              $("#text-desert").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          }
+
+          window.video = "desert";
+          break;
+
+        case "vegan":
+          $("#dish-title")
+            .animate({ opacity: 0 }, 1000, function () {
+              $(this).text("Sopa de Legumes com Feijão Branco e Espinafres");
+            })
+            .animate({ opacity: 1 }, 1000);
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitasopa.jpg");
+
+          $("#main-video")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/video/Sopa de Legumes com Feijão Branco e Espinafres.mp4"
+            );
+
+          if ($("#images-vegan").css("display") != "none") {
+            $("#images-vegan").fadeOut(1000, function () {
+              $("#images-soup").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          } else {
+            $("#text-vegan").fadeOut(1000, function () {
+              $("#text-soup").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          }
+
+          window.video = "sopa";
+          break;
+        case "meat":
+          $("#dish-title")
+            .animate({ opacity: 0 }, 1000, function () {
+              $(this).text(
+                "Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento"
+              );
+            })
+            .animate({ opacity: 1 }, 1000);
+
+          $("#main-video")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/video/Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento.mp4"
+            );
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
+
+          if ($("#images-meat").css("display") != "none") {
+            $("#images-meat").fadeOut(1000, function () {
+              $("#images-vegan").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          } else {
+            $("#text-meat").fadeOut(1000, function () {
+              $("#text-vegan").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          }
+
+          window.video = "vegan";
+          break;
+
+        case "desert":
+          $("#dish-title")
+            .animate({ opacity: 0 }, 1000, function () {
+              $(this).text("Strogonoff de Frango");
+            })
+            .animate({ opacity: 1 }, 1000);
+
+          $("#main-video")
+            .get(0)
+            .setAttribute("src", "./resources/video/Strogonoff de Frango.mp4");
+
+          $("#listaingredientes")
+            .get(0)
+            .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
+
+          if ($("#images-desert").css("display") != "none") {
+            $("#images-desert").fadeOut(1000, function () {
+              $("#images-meat").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          } else {
+            $("#text-desert").fadeOut(1000, function () {
+              $("#text-meat").fadeIn(1000);
+              $("#main-video").get(0).play();
+            });
+          }
+
+          window.video = "meat";
+
+          break;
+      }
+
+      //Update highlights, animations, etc
+      $("#btn_play img").attr(
+        "src",
+        "./resources/img/video-controls/btn_pause.svg"
+      );
+
+      var video = $("#main-video").get(0);
+      var videoTimestamps = {
+        sopa: [
+          [14, 36],
+          [36, 49],
+          [49, 76],
+          [76, 98],
+          [98, 124],
+          [124, 143],
+        ],
+
+        vegan: [
+          [15, 45],
+          [45, 58],
+          [58, 82],
+          [82, 110],
+          [110, 121],
+          [121, 136],
+          [136, 164],
+          [164, 180],
+          [180, 200],
+          [200, 210],
+          [210, 228],
+          [228, 263],
+          [263, 284],
+        ],
+
+        meat: [
+          [20, 52],
+          [52, 87],
+          [87, 100],
+          [100, 120],
+          [120, 139],
+          [139, 159],
+          [159, 172],
+          [172, 187],
+          [187, 209],
+          [209, 236],
+          [236, 251],
+          [251, 277],
+          [277, 290],
+        ],
+
+        desert: [
+          [21, 47],
+          [47, 69],
+          [69, 88],
+          [88, 126],
+          [126, 139],
+          [139, 148],
+          [148, 181],
+          [181, 188],
+          [188, 215],
+        ],
+      };
+
+      videoControls(video, videoTimestamps);
+
+      stepHighlight(video, videoTimestamps);
+
+      stepClicks(video, videoTimestamps);
+    }
+  }
+
+  $("#btn-prev-recipe").on("click", prevVideo);
 });

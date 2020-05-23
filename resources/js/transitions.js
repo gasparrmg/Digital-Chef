@@ -133,6 +133,143 @@ function detectVideo(event, CURRENT) {
 
 }
 
+function detectVideo2(event, CURRENT) {
+  
+  if (
+    event.target.id == "dish-card-sopa" ||
+    event.target.id == "soup-image"
+  ) {
+    window.video = "sopa";
+
+    $("#vegan-image").css("opacity", "0.2");
+    $("#vegan-title").css("opacity", "0.2");
+
+    $("#meat-image").css("opacity", "0.2");
+    $("#meat-title").css("opacity", "0.2");
+
+    $("#desert-image").css("opacity", "0.2");
+    $("#desert-title").css("opacity", "0.2");
+
+  } else if (
+    event.target.id == "dish-card-vegan" ||
+    event.target.id == "vegan-image"
+  ) {
+    window.video = "vegan";
+
+    $("#soup-image").css("opacity", "0.2");
+    $("#soup-title").css("opacity", "0.2");
+
+    $("#meat-image").css("opacity", "0.2");
+    $("#meat-title").css("opacity", "0.2");
+
+    $("#desert-image").css("opacity", "0.2");
+    $("#desert-title").css("opacity", "0.2");
+
+
+  } else if (
+    event.target.id == "dish-card-meat" ||
+    event.target.id == "meat-image"
+  ) {
+    window.video = "meat";
+
+    $("#soup-image").css("opacity", "0.2");
+    $("#soup-title").css("opacity", "0.2");
+
+    $("#vegan-image").css("opacity", "0.2");
+    $("#vegan-title").css("opacity", "0.2");
+
+    $("#desert-image").css("opacity", "0.2");
+    $("#desert-title").css("opacity", "0.2");
+
+  } else if (
+    event.target.id == "dish-card-desert" ||
+    event.target.id == "desert-image"
+  ) {
+    window.video = "desert";
+
+    $("#soup-image").css("opacity", "0.2");
+    $("#soup-title").css("opacity", "0.2");
+
+    $("#vegan-image").css("opacity", "0.2");
+    $("#vegan-title").css("opacity", "0.2");
+
+    $("#meat-image").css("opacity", "0.2");
+    $("#meat-title").css("opacity", "0.2");
+  }
+////// START- initialization part for synchro VIDEO<-> IMAGE <-> TEST
+  let video = $("#main-video").get(0);
+  var videoTimestamps = {
+      sopa: [
+          [14, 36],
+          [36, 49],
+          [49, 76],
+          [76, 98],
+          [98, 124],
+          [124, 143]
+      ],
+      
+      vegan: [
+          [15, 45],
+          [45, 58],
+          [58, 82],
+          [82, 110],
+          [110, 121],
+          [121, 136],
+          [136, 164],
+          [164, 180],
+          [180, 200],
+          [200, 210],
+          [210, 228],
+          [228, 263],
+          [263, 284]
+      ],
+
+      meat: [
+          [20, 52],
+          [52, 87],
+          [87, 100],
+          [100, 120],
+          [120, 139],
+          [139, 159],
+          [159, 172],
+          [172, 187],
+          [187, 209],
+          [209, 236],
+          [236, 251],
+          [251, 277],
+          [277, 290]
+      ], 
+    
+      desert: [
+          [21, 47],
+          [47, 69],
+          [69, 88],
+          [88, 126],
+          [126, 139],
+          [139, 148],
+          [148, 181],
+          [181, 188],
+          [188, 215]
+      ]
+  };
+
+ 
+  videoControls(video, videoTimestamps);
+
+  stepHighlight(video, videoTimestamps);
+
+  stepClicks(video, videoTimestamps);
+
+  ////// END- initialization part for synchro VIDEO<-> IMAGE <-> TEST
+
+
+  console.log(window.video);
+ 
+
+}
+
+
+
 $(document).ready(function () {
   $(".select-recipe a").click(function(e) {
     e.preventDefault();
@@ -345,6 +482,150 @@ $(document).ready(function () {
       );
     });
   });
+
+//video page
+
+  $(".dish-list.videopage .dish-card a").click(function (event) {
+    detectVideo2(event);
+    //console.log(window.video);
+    //console.log("sup");
+
+   
+
+    $(".dish-list.videopage .dish-card").css("margin", "0px");
+    
+    $(".dish-list .dish-name").css("display", "none");
+
+
+    $(".dish-list.videopage").animate(
+      {
+        margin: "20px 300px 0px 300px",
+      },
+      1000
+    );
+
+    $(".dish-card h2").animate(
+      {
+        "font-size": "1.25rem",
+      },
+      1000
+    );
+
+    $(".dish-card img").animate(
+      {
+        width: "60px",
+      },
+      1000
+    );
+
+    $(".dish-card").animate(
+      {
+        top: "+=300px",
+      },
+      { duration: 1000, queue: false }
+    );
+
+    // - TRANSITION FROM MAIN TO VIDEOPAGE ---------------
+    $(".videopage-wrapper").fadeOut(1500, function () {
+      //animation complete
+
+      switch (window.video) {
+        case "sopa":
+          $("#main-video")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/video/Sopa de Legumes com Feijão Branco e Espinafres.mp4"
+            );
+
+          $("#dish-title").text(
+            "Sopa de Legumes com Feijão Branco e Espinafres"
+          );
+
+          $(".videopage-wrapper").fadeIn(1500, function () {
+            $("#images-soup").fadeIn(500);
+            $("#main-video").get(0).play();
+
+            $("#btn_play img").attr(
+              "src",
+              "./resources/img/video-controls/btn_pause.svg"
+            );
+          });
+
+          break;
+
+        case "vegan":
+          $("#main-video")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/video/Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento.mp4"
+            );
+
+          $("#dish-title").text(
+            "Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento"
+          );
+
+          $(".videopage-wrapper").fadeIn(1500, function () {
+            $("#images-vegan").fadeIn(500);
+            $("#main-video").get(0).play();
+
+            $("#btn_play img").attr(
+              "src",
+              "./resources/img/video-controls/btn_pause.svg"
+            );
+          });
+
+          break;
+        case "meat":
+          $("#main-video")
+            .get(0)
+            .setAttribute("src", "./resources/video/Strogonoff de Frango.mp4");
+
+          $("#dish-title").text("Strogonoff de Frango");
+
+          $(".videopage-wrapper").fadeIn(1500, function () {
+            $("#images-meat").fadeIn(500);
+            $("#main-video").get(0).play();
+
+            $("#btn_play img").attr(
+              "src",
+              "./resources/img/video-controls/btn_pause.svg"
+            );
+          });
+
+          break;
+        case "desert":
+          $("#main-video")
+            .get(0)
+            .setAttribute(
+              "src",
+              "./resources/video/Bolo Mousse de Chocolate.mp4"
+            );
+
+          $("#dish-title").text("Bolo Mousse de Chocolate");
+
+          $(".videopage-wrapper").fadeIn(1500, function () {
+            $("#images-desert").fadeIn(500);
+            $("#main-video").get(0).play();
+
+            $("#btn_play img").attr(
+              "src",
+              "./resources/img/video-controls/btn_pause.svg"
+            );
+          });
+
+          break;
+      }
+
+      $(".dish-card").animate(
+        {
+          top: "-=300px",
+        },
+        1500
+      );
+    });
+  });
   // ----------------------------------------------------
 
   // - SWITCH BETWEEN IMAGES OR TEXT ---------------------
@@ -438,8 +719,7 @@ $(document).ready(function () {
 
     $("#btn-images").click()
   });
-  //-------------------------------------------------------
-  // buttons video page
+  
 
 
 

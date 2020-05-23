@@ -547,3 +547,4 @@ function stepHighlight(video, videoTimestamps) {
 
     });
 }
+

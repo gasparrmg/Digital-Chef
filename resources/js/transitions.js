@@ -5,21 +5,61 @@ function detectVideo(event, CURRENT) {
     event.target.id == "dish-card-sopa-img"
   ) {
     window.video = "sopa";
+
+    $("#vegan-image").css("opacity", "0.2");
+    $("#vegan-title").css("opacity", "0.2");
+
+    $("#meat-image").css("opacity", "0.2");
+    $("#meat-title").css("opacity", "0.2");
+
+    $("#desert-image").css("opacity", "0.2");
+    $("#desert-title").css("opacity", "0.2");
+
   } else if (
     event.target.id == "dish-card-vegan" ||
     event.target.id == "dish-card-vegan-img"
   ) {
     window.video = "vegan";
+
+    $("#soup-image").css("opacity", "0.2");
+    $("#soup-title").css("opacity", "0.2");
+
+    $("#meat-image").css("opacity", "0.2");
+    $("#meat-title").css("opacity", "0.2");
+
+    $("#desert-image").css("opacity", "0.2");
+    $("#desert-title").css("opacity", "0.2");
+
+
   } else if (
     event.target.id == "dish-card-meat" ||
     event.target.id == "dish-card-meat-img"
   ) {
     window.video = "meat";
+
+    $("#soup-image").css("opacity", "0.2");
+    $("#soup-title").css("opacity", "0.2");
+
+    $("#vegan-image").css("opacity", "0.2");
+    $("#vegan-title").css("opacity", "0.2");
+
+    $("#desert-image").css("opacity", "0.2");
+    $("#desert-title").css("opacity", "0.2");
+
   } else if (
     event.target.id == "dish-card-desert" ||
     event.target.id == "dish-card-desert-img"
   ) {
     window.video = "desert";
+
+    $("#soup-image").css("opacity", "0.2");
+    $("#soup-title").css("opacity", "0.2");
+
+    $("#vegan-image").css("opacity", "0.2");
+    $("#vegan-title").css("opacity", "0.2");
+
+    $("#meat-image").css("opacity", "0.2");
+    $("#meat-title").css("opacity", "0.2");
   }
 ////// START- initialization part for synchro VIDEO<-> IMAGE <-> TEST
   let video = $("#main-video").get(0);
@@ -78,6 +118,7 @@ function detectVideo(event, CURRENT) {
       ]
   };
 
+  recipeHighlight(video);
 
   videoControls(video, videoTimestamps);
 
@@ -399,4 +440,10 @@ $(document).ready(function () {
     $("#btn-images").click()
   });
   //-------------------------------------------------------
+  // buttons video page
+
+
+
+
 });
+

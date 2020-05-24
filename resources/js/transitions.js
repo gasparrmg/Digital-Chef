@@ -1,24 +1,65 @@
 function detectVideo(event, CURRENT) {
+  
   if (
     event.target.id == "dish-card-sopa" ||
     event.target.id == "dish-card-sopa-img"
   ) {
     window.video = "sopa";
+
+    $("#vegan-image").css("opacity", "0.2");
+    $("#vegan-title").css("opacity", "0.2");
+
+    $("#meat-image").css("opacity", "0.2");
+    $("#meat-title").css("opacity", "0.2");
+
+    $("#desert-image").css("opacity", "0.2");
+    $("#desert-title").css("opacity", "0.2");
+
   } else if (
     event.target.id == "dish-card-vegan" ||
     event.target.id == "dish-card-vegan-img"
   ) {
     window.video = "vegan";
+
+    $("#soup-image").css("opacity", "0.2");
+    $("#soup-title").css("opacity", "0.2");
+
+    $("#meat-image").css("opacity", "0.2");
+    $("#meat-title").css("opacity", "0.2");
+
+    $("#desert-image").css("opacity", "0.2");
+    $("#desert-title").css("opacity", "0.2");
+
+
   } else if (
     event.target.id == "dish-card-meat" ||
     event.target.id == "dish-card-meat-img"
   ) {
     window.video = "meat";
+
+    $("#soup-image").css("opacity", "0.2");
+    $("#soup-title").css("opacity", "0.2");
+
+    $("#vegan-image").css("opacity", "0.2");
+    $("#vegan-title").css("opacity", "0.2");
+
+    $("#desert-image").css("opacity", "0.2");
+    $("#desert-title").css("opacity", "0.2");
+
   } else if (
     event.target.id == "dish-card-desert" ||
     event.target.id == "dish-card-desert-img"
   ) {
     window.video = "desert";
+
+    $("#soup-image").css("opacity", "0.2");
+    $("#soup-title").css("opacity", "0.2");
+
+    $("#vegan-image").css("opacity", "0.2");
+    $("#vegan-title").css("opacity", "0.2");
+
+    $("#meat-image").css("opacity", "0.2");
+    $("#meat-title").css("opacity", "0.2");
   }
   ////// START- initialization part for synchro VIDEO<-> IMAGE <-> TEST
   let video = $("#main-video").get(0);
@@ -835,7 +876,7 @@ $(document).ready(function () {
 
 
   $(".dish-list.videopage .dish-card a").click((event) => {
- 
+   
     if (event.target.id == "soup-title" || event.target.id == "soup-image") {
       $("#dish-title")
         .animate({ opacity: 0 }, 1000, function () {
@@ -866,8 +907,9 @@ $(document).ready(function () {
           $("#main-video").get(0).play();
         });
       }
-
+      
       window.video = "sopa";
+      detectVideo(event);
     } else if (event.target.id == "vegan-title" ||event.target.id == "vegan-image") {
       $("#dish-title")
         .animate({ opacity: 0 }, 1000, function () {
@@ -902,6 +944,7 @@ $(document).ready(function () {
       }
 
       window.video = "vegan";
+      detectVideo(event);
     } else if (
       event.target.id == "meat-title" ||
       event.target.id == "meat-image"
@@ -934,6 +977,7 @@ $(document).ready(function () {
       }
 
       window.video = "meat";
+      detectVideo(event);
     } else if (
       event.target.id == "desert-title" ||
       event.target.id == "desert-image"
@@ -966,6 +1010,7 @@ $(document).ready(function () {
       }
 
       window.video = "desert";
+      detectVideo(event);
     }
 
     //Update highlights, animations, etc

@@ -1,24 +1,114 @@
 function detectVideo(event, CURRENT) {
+  
   if (
     event.target.id == "dish-card-sopa" ||
-    event.target.id == "dish-card-sopa-img"
+    event.target.id == "dish-card-sopa-img" || event.target.id == "soup-image"
   ) {
     window.video = "sopa";
+
+    $("#soup-image").css("opacity", "1");
+    $("#soup-title").css("opacity", "1");
+    $("#images-soup").css("display", "block");
+    $("#text-soup").css("display", "none");
+
+    $("#vegan-image").css("opacity", "0.5");
+    $("#vegan-title").css("opacity", "0.5");
+    $("#images-vegan").css("display", "none");
+    $("#text-vegan").css("display", "none");
+
+    $("#meat-image").css("opacity", "0.5");
+    $("#meat-title").css("opacity", "0.5");
+    $("#images-meat").css("display", "none");
+    $("#text-meat").css("display", "none");
+
+
+    $("#desert-image").css("opacity", "0.5");
+    $("#desert-title").css("opacity", "0.5");
+    $("#images-desert").css("display", "none");
+    $("#text-desert").css("display", "none");
+
   } else if (
     event.target.id == "dish-card-vegan" ||
-    event.target.id == "dish-card-vegan-img"
+    event.target.id == "dish-card-vegan-img" || event.target.id == "vegan-image"
   ) {
     window.video = "vegan";
+
+    $("#vegan-image").css("opacity", "1");
+    $("#vegan-title").css("opacity", "1");
+    $("#images-vegan").css("display", "block");
+    $("#text-vegan").css("display", "none");
+
+
+    $("#soup-image").css("opacity", "0.5");
+    $("#soup-title").css("opacity", "0.5");
+    $("#images-soup").css("display", "none");
+    $("#text-soup").css("display", "none");
+
+    
+    $("#meat-image").css("opacity", "0.5");
+    $("#meat-title").css("opacity", "0.5");
+    $("#images-meat").css("display", "none");
+    $("#text-meat").css("display", "none");
+
+    $("#desert-image").css("opacity", "0.5");
+    $("#desert-title").css("opacity", "0.5");
+    $("#images-desert").css("display", "none");
+    $("#text-desert").css("display", "none");
+
   } else if (
     event.target.id == "dish-card-meat" ||
-    event.target.id == "dish-card-meat-img"
+    event.target.id == "dish-card-meat-img" || event.target.id == "meat-image"
   ) {
     window.video = "meat";
+    
+    $("#meat-image").css("opacity", "1");
+    $("#meat-title").css("opacity", "1");
+    $("#images-meat").css("display", "block");
+    $("#text-meat").css("display", "none");
+    
+    $("#soup-image").css("opacity", "0.5");
+    $("#soup-title").css("opacity", "0.5");
+    $("#images-soup").css("display", "none");
+    $("#text-soup").css("display", "none");
+
+
+    $("#vegan-image").css("opacity", "0.5");
+    $("#vegan-title").css("opacity", "0.5");
+    $("#images-vegan").css("display", "none");
+    $("#text-vegan").css("display", "none");
+
+
+    $("#desert-image").css("opacity", "0.5");
+    $("#desert-title").css("opacity", "0.5");
+    $("#images-desert").css("display", "none");
+    $("#text-desert").css("display", "none");
+
   } else if (
     event.target.id == "dish-card-desert" ||
-    event.target.id == "dish-card-desert-img"
+    event.target.id == "dish-card-desert-img" || event.target.id == "desert-image"
   ) {
     window.video = "desert";
+
+    $("#desert-image").css("opacity", "1");
+    $("#desert-title").css("opacity", "1");
+    $("#images-desert").css("display", "block");
+    $("#text-desert").css("display", "none");
+    
+    $("#soup-image").css("opacity", "0.5");
+    $("#soup-title").css("opacity", "0.5");
+    $("#images-soup").css("display", "none");
+    $("#text-soup").css("display", "none");
+
+    $("#vegan-image").css("opacity", "0.5");
+    $("#vegan-title").css("opacity", "0.5");
+    $("#images-vegan").css("display", "none");
+    $("#text-vegan").css("display", "none");
+
+    $("#meat-image").css("opacity", "0.5");
+    $("#meat-title").css("opacity", "0.5");
+    $("#images-meat").css("display", "none");
+    $("#text-meat").css("display", "none");
+
   }
   ////// START- initialization part for synchro VIDEO<-> IMAGE <-> TEST
   let video = $("#main-video").get(0);
@@ -447,8 +537,42 @@ $(document).ready(function () {
           }
 
           window.video = "vegan";
+
+
+
+          $("#vegan-image").css("opacity", "1");
+    $("#vegan-title").css("opacity", "1");
+    $("#images-vegan").css("display", "block");
+    $("#text-vegan").css("display", "none");
+
+
+    $("#soup-image").css("opacity", "0.5");
+    $("#soup-title").css("opacity", "0.5");
+    $("#images-soup").css("display", "none");
+    $("#text-soup").css("display", "none");
+
+    
+    $("#meat-image").css("opacity", "0.5");
+    $("#meat-title").css("opacity", "0.5");
+    $("#images-meat").css("display", "none");
+    $("#text-meat").css("display", "none");
+
+    $("#desert-image").css("opacity", "0.5");
+    $("#desert-title").css("opacity", "0.5");
+    $("#images-desert").css("display", "none");
+    $("#text-desert").css("display", "none");
+
           break;
         case "vegan":
+
+
+
+
+
+
+
+
+        
           $("#dish-title")
             .animate({ opacity: 0 }, 1000, function () {
               $(this).text("Strogonoff de Frango");
@@ -476,6 +600,30 @@ $(document).ready(function () {
           }
 
           window.video = "meat";
+
+
+
+          $("#meat-image").css("opacity", "1");
+    $("#meat-title").css("opacity", "1");
+    $("#images-meat").css("display", "block");
+    $("#text-meat").css("display", "none");
+    
+    $("#soup-image").css("opacity", "0.5");
+    $("#soup-title").css("opacity", "0.5");
+    $("#images-soup").css("display", "none");
+    $("#text-soup").css("display", "none");
+
+
+    $("#vegan-image").css("opacity", "0.5");
+    $("#vegan-title").css("opacity", "0.5");
+    $("#images-vegan").css("display", "none");
+    $("#text-vegan").css("display", "none");
+
+
+    $("#desert-image").css("opacity", "0.5");
+    $("#desert-title").css("opacity", "0.5");
+    $("#images-desert").css("display", "none");
+    $("#text-desert").css("display", "none");
           break;
         case "meat":
           $("#dish-title")
@@ -502,15 +650,41 @@ $(document).ready(function () {
             });
           } else {
             $("#text-meat").fadeOut(1000, function () {
-              $("#text-desert").fadeIn(1000);
+              //$("#text-desert").fadeIn(1000);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "desert";
+
+          $("#desert-image").css("opacity", "1");
+          $("#desert-title").css("opacity", "1");
+          $("#images-desert").css("display", "block");
+          $("#text-desert").css("display", "none");
+          
+          $("#soup-image").css("opacity", "0.5");
+          $("#soup-title").css("opacity", "0.5");
+          $("#images-soup").css("display", "none");
+          $("#text-soup").css("display", "none");
+      
+          $("#vegan-image").css("opacity", "0.5");
+          $("#vegan-title").css("opacity", "0.5");
+          $("#images-vegan").css("display", "none");
+          $("#text-vegan").css("display", "none");
+      
+          $("#meat-image").css("opacity", "0.5");
+          $("#meat-title").css("opacity", "0.5");
+          $("#images-meat").css("display", "none");
+          $("#text-meat").css("display", "none");
           break;
 
         case "desert":
+
+
+         
+
+
+        
           $("#dish-title")
             .animate({ opacity: 0 }, 1000, function () {
               $(this).text("Sopa de Legumes com Feijão Branco e Espinafres");
@@ -541,6 +715,29 @@ $(document).ready(function () {
           }
 
           window.video = "sopa";
+
+          $("#soup-image").css("opacity", "1");
+          $("#soup-title").css("opacity", "1");
+          $("#images-soup").css("display", "block");
+          $("#text-soup").css("display", "none");
+      
+          $("#vegan-image").css("opacity", "0.5");
+          $("#vegan-title").css("opacity", "0.5");
+          $("#images-vegan").css("display", "none");
+          $("#text-vegan").css("display", "none");
+      
+          $("#meat-image").css("opacity", "0.5");
+          $("#meat-title").css("opacity", "0.5");
+          $("#images-meat").css("display", "none");
+          $("#text-meat").css("display", "none");
+      
+      
+          $("#desert-image").css("opacity", "0.5");
+          $("#desert-title").css("opacity", "0.5");
+          $("#images-desert").css("display", "none");
+          $("#text-desert").css("display", "none");
+
+          
           break;
       }
 
@@ -651,12 +848,34 @@ $(document).ready(function () {
             });
           } else {
             $("#text-soup").fadeOut(1000, function () {
-              $("#text-desert").fadeIn(1000);
+              //$("#text-desert").fadeIn(1000);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "desert";
+
+          $("#desert-image").css("opacity", "1");
+          $("#desert-title").css("opacity", "1");
+          $("#images-desert").css("display", "block");
+          $("#text-desert").css("display", "none");
+          
+          $("#soup-image").css("opacity", "0.5");
+          $("#soup-title").css("opacity", "0.5");
+          $("#images-soup").css("display", "none");
+          $("#text-soup").css("display", "none");
+      
+          $("#vegan-image").css("opacity", "0.5");
+          $("#vegan-title").css("opacity", "0.5");
+          $("#images-vegan").css("display", "none");
+          $("#text-vegan").css("display", "none");
+      
+          $("#meat-image").css("opacity", "0.5");
+          $("#meat-title").css("opacity", "0.5");
+          $("#images-meat").css("display", "none");
+          $("#text-meat").css("display", "none");
+
+
           break;
 
         case "vegan":
@@ -679,7 +898,7 @@ $(document).ready(function () {
 
           if ($("#images-vegan").css("display") != "none") {
             $("#images-vegan").fadeOut(1000, function () {
-              $("#images-soup").fadeIn(1000);
+              //$("#images-soup").fadeIn(1000);
               $("#main-video").get(0).play();
             });
           } else {
@@ -690,6 +909,28 @@ $(document).ready(function () {
           }
 
           window.video = "sopa";
+
+          $("#soup-image").css("opacity", "1");
+          $("#soup-title").css("opacity", "1");
+          $("#images-soup").css("display", "block");
+          $("#text-soup").css("display", "none");
+      
+          $("#vegan-image").css("opacity", "0.5");
+          $("#vegan-title").css("opacity", "0.5");
+          $("#images-vegan").css("display", "none");
+          $("#text-vegan").css("display", "none");
+      
+          $("#meat-image").css("opacity", "0.5");
+          $("#meat-title").css("opacity", "0.5");
+          $("#images-meat").css("display", "none");
+          $("#text-meat").css("display", "none");
+      
+      
+          $("#desert-image").css("opacity", "0.5");
+          $("#desert-title").css("opacity", "0.5");
+          $("#images-desert").css("display", "none");
+          $("#text-desert").css("display", "none");
+
           break;
         case "meat":
           $("#dish-title")
@@ -718,12 +959,34 @@ $(document).ready(function () {
             });
           } else {
             $("#text-meat").fadeOut(1000, function () {
-              $("#text-vegan").fadeIn(1000);
+              //$("#text-vegan").fadeIn(1000);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "vegan";
+          $("#vegan-image").css("opacity", "1");
+          $("#vegan-title").css("opacity", "1");
+          $("#images-vegan").css("display", "block");
+          $("#text-vegan").css("display", "none");
+      
+      
+          $("#soup-image").css("opacity", "0.5");
+          $("#soup-title").css("opacity", "0.5");
+          $("#images-soup").css("display", "none");
+          $("#text-soup").css("display", "none");
+      
+          
+          $("#meat-image").css("opacity", "0.5");
+          $("#meat-title").css("opacity", "0.5");
+          $("#images-meat").css("display", "none");
+          $("#text-meat").css("display", "none");
+      
+          $("#desert-image").css("opacity", "0.5");
+          $("#desert-title").css("opacity", "0.5");
+          $("#images-desert").css("display", "none");
+          $("#text-desert").css("display", "none");
+          
           break;
 
         case "desert":
@@ -754,7 +1017,27 @@ $(document).ready(function () {
           }
 
           window.video = "meat";
-
+          $("#meat-image").css("opacity", "1");
+          $("#meat-title").css("opacity", "1");
+          $("#images-meat").css("display", "block");
+          $("#text-meat").css("display", "none");
+          
+          $("#soup-image").css("opacity", "0.5");
+          $("#soup-title").css("opacity", "0.5");
+          $("#images-soup").css("display", "none");
+          $("#text-soup").css("display", "none");
+      
+      
+          $("#vegan-image").css("opacity", "0.5");
+          $("#vegan-title").css("opacity", "0.5");
+          $("#images-vegan").css("display", "none");
+          $("#text-vegan").css("display", "none");
+      
+      
+          $("#desert-image").css("opacity", "0.5");
+          $("#desert-title").css("opacity", "0.5");
+          $("#images-desert").css("display", "none");
+          $("#text-desert").css("display", "none");
           break;
       }
 
@@ -829,4 +1112,307 @@ $(document).ready(function () {
   }
 
   $("#btn-prev-recipe").on("click", prevVideo);
+
+  
+
+
+
+  $(".dish-list.videopage .dish-card a").click((event) => {
+   
+    if (event.target.id == "soup-title" || event.target.id == "soup-image") {
+
+      $("#soup-image").css("opacity", "1");
+      $("#soup-title").css("opacity", "1");
+      $("#images-soup").css("display", "block");
+      $("#text-soup").css("display", "none");
+  
+      $("#vegan-image").css("opacity", "0.5");
+      $("#vegan-title").css("opacity", "0.5");
+      $("#images-vegan").css("display", "none");
+      $("#text-vegan").css("display", "none");
+  
+      $("#meat-image").css("opacity", "0.5");
+      $("#meat-title").css("opacity", "0.5");
+      $("#images-meat").css("display", "none");
+      $("#text-meat").css("display", "none");
+  
+  
+      $("#desert-image").css("opacity", "0.5");
+      $("#desert-title").css("opacity", "0.5");
+      $("#images-desert").css("display", "none");
+      $("#text-desert").css("display", "none");
+
+      $("#dish-title")
+        .animate({ opacity: 0 }, 1000, function () {
+          $(this).text("Sopa de Legumes com Feijão Branco e Espinafres ");
+        })
+        .animate({ opacity: 1 }, 1000);
+
+      $("#listaingredientes")
+        .get(0)
+        .setAttribute("src", "./resources/img/receitas/receitasopa.jpg");
+
+      $("#main-video")
+        .get(0)
+        .setAttribute(
+          "src",
+          "./resources/video/Sopa de Legumes com Feijão Branco e Espinafres.mp4"
+        );
+
+      //Switch right side
+      if ($("#images-soup").css("display") != "none") {/*
+        $("#images-soup").fadeOut(1000, function () {
+          $("#images-soup").fadeIn(1000);*/
+          $("#main-video").get(0).play();
+        /*});
+      } else {
+        $("#text-soup").fadeOut(1000, function () {
+          $("#text-soup").fadeIn(1000);
+          $("#main-video").get(0).play();
+        });
+      */}
+      
+      window.video = "sopa";
+      detectVideo(event);
+    } else if (event.target.id == "vegan-title" ||event.target.id == "vegan-image") {
+
+          $("#vegan-image").css("opacity", "1");
+          $("#vegan-title").css("opacity", "1");
+          $("#images-vegan").css("display", "block");
+          $("#text-vegan").css("display", "none");
+      
+      
+          $("#soup-image").css("opacity", "0.5");
+          $("#soup-title").css("opacity", "0.5");
+          $("#images-soup").css("display", "none");
+          $("#text-soup").css("display", "none");
+      
+          
+          $("#meat-image").css("opacity", "0.5");
+          $("#meat-title").css("opacity", "0.5");
+          $("#images-meat").css("display", "none");
+          $("#text-meat").css("display", "none");
+      
+          $("#desert-image").css("opacity", "0.5");
+          $("#desert-title").css("opacity", "0.5");
+          $("#images-desert").css("display", "none");
+          $("#text-desert").css("display", "none");
+      $("#dish-title")
+        .animate({ opacity: 0 }, 1000, function () {
+          $(this).text(
+            "Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento "
+          );
+        })
+        .animate({ opacity: 1 }, 1000);
+
+      $("#listaingredientes")
+        .get(0)
+        .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
+
+      $("#main-video")
+        .get(0)
+        .setAttribute(
+          "src",
+          "./resources/video/Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento.mp4"
+        );
+
+      //Switch right side
+      if ($("#images-soup").css("display") != "none") {
+        $("#images-soup").fadeOut(1000, function () {
+          $("#images-vegan").fadeIn(1000);
+          $("#main-video").get(0).play();
+        });
+      } else {
+        $("#text-soup").fadeOut(1000, function () {
+          $("#images-vegan").fadeIn(1000);
+          $("#main-video").get(0).play();
+        });
+      }
+
+      window.video = "vegan";
+      detectVideo(event);
+    } else if (
+      event.target.id == "meat-title" ||
+      event.target.id == "meat-image"
+    ) {
+
+          $("#meat-image").css("opacity", "1");
+          $("#meat-title").css("opacity", "1");
+          $("#images-meat").css("display", "block");
+          $("#text-meat").css("display", "none");
+          
+          $("#soup-image").css("opacity", "0.5");
+          $("#soup-title").css("opacity", "0.5");
+          $("#images-soup").css("display", "none");
+          $("#text-soup").css("display", "none");
+      
+      
+          $("#vegan-image").css("opacity", "0.5");
+          $("#vegan-title").css("opacity", "0.5");
+          $("#images-vegan").css("display", "none");
+          $("#text-vegan").css("display", "none");
+      
+      
+          $("#desert-image").css("opacity", "0.5");
+          $("#desert-title").css("opacity", "0.5");
+          $("#images-desert").css("display", "none");
+          $("#text-desert").css("display", "none");
+
+      $("#dish-title")
+        .animate({ opacity: 0 }, 1000, function () {
+          $(this).text("Strogonoff de Frango ");
+        })
+        .animate({ opacity: 1 }, 1000);
+
+      $("#listaingredientes")
+        .get(0)
+        .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
+
+      $("#main-video")
+        .get(0)
+        .setAttribute("src", "./resources/video/Strogonoff de Frango.mp4");
+
+      //Switch right side
+      if ($("#images-soup").css("display") != "none") {
+        $("#images-soup").fadeOut(1000, function () {
+          $("#images-carne").fadeIn(1000);
+          $("#main-video").get(0).play();
+        });
+      } else {
+        $("#text-soup").fadeOut(1000, function () {
+          $("#text-carne").fadeIn(1000);
+          $("#main-video").get(0).play();
+        });
+      }
+
+      window.video = "meat";
+      detectVideo(event);
+    } else if (
+      event.target.id == "desert-title" ||
+      event.target.id == "desert-image"
+    ) {
+
+      $("#desert-image").css("opacity", "1");
+      $("#desert-title").css("opacity", "1");
+      $("#images-desert").css("display", "block");
+      $("#text-desert").css("display", "none");
+      
+      $("#soup-image").css("opacity", "0.5");
+      $("#soup-title").css("opacity", "0.5");
+      $("#images-soup").css("display", "none");
+      $("#text-soup").css("display", "none");
+  
+      $("#vegan-image").css("opacity", "0.5");
+      $("#vegan-title").css("opacity", "0.5");
+      $("#images-vegan").css("display", "none");
+      $("#text-vegan").css("display", "none");
+  
+      $("#meat-image").css("opacity", "0.5");
+      $("#meat-title").css("opacity", "0.5");
+      $("#images-meat").css("display", "none");
+      $("#text-meat").css("display", "none");
+
+      $("#dish-title")
+        .animate({ opacity: 0 }, 1000, function () {
+          $(this).text("Bolo Mousse de Chocolate ");
+        })
+        .animate({ opacity: 1 }, 1000);
+
+      $("#listaingredientes")
+        .get(0)
+        .setAttribute("src", "./resources/img/receitas/receitadesert.jpg");
+
+      $("#main-video")
+        .get(0)
+        .setAttribute("src", "./resources/video/Bolo Mousse de Chocolate.mp4");
+
+      //Switch right side
+      if ($("#images-soup").css("display") != "none") {
+        $("#images-soup").fadeOut(1000, function () {
+          $("#images-desert").fadeIn(1000);
+          $("#main-video").get(0).play();
+        });
+      } else {
+        $("#text-soup").fadeOut(1000, function () {
+          //$("#text-desert").fadeIn(1000);
+          $("#main-video").get(0).play();
+        });
+      }
+
+      window.video = "desert";
+      detectVideo(event);
+    }
+
+    //Update highlights, animations, etc
+    $("#btn_play img").attr(
+      "src",
+      "./resources/img/video-controls/btn_pause.svg"
+    );
+
+    var video = $("#main-video").get(0);
+    var videoTimestamps = {
+      sopa: [
+        [14, 36],
+        [36, 49],
+        [49, 76],
+        [76, 98],
+        [98, 124],
+        [124, 143],
+      ],
+
+      vegan: [
+        [15, 45],
+        [45, 58],
+        [58, 82],
+        [82, 110],
+        [110, 121],
+        [121, 136],
+        [136, 164],
+        [164, 180],
+        [180, 200],
+        [200, 210],
+        [210, 228],
+        [228, 263],
+        [263, 284],
+      ],
+
+      meat: [
+        [20, 52],
+        [52, 87],
+        [87, 100],
+        [100, 120],
+        [120, 139],
+        [139, 159],
+        [159, 172],
+        [172, 187],
+        [187, 209],
+        [209, 236],
+        [236, 251],
+        [251, 277],
+        [277, 290],
+      ],
+
+      desert: [
+        [21, 47],
+        [47, 69],
+        [69, 88],
+        [88, 126],
+        [126, 139],
+        [139, 148],
+        [148, 181],
+        [181, 188],
+        [188, 215],
+      ],
+    };
+
+    videoControls(video, videoTimestamps);
+
+    stepHighlight(video, videoTimestamps);
+
+    stepClicks(video, videoTimestamps);
+  });
+
+
 });
+ 
+

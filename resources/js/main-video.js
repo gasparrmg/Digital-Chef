@@ -283,7 +283,7 @@ function stepHighlight(video, videoTimestamps) {
 
     if (window.video == "sopa") {
       //console.log("FOURTH IF " + window.video);
-
+/*
       if (
         video.currentTime == videoTimestamps.sopa[0][0] 
       ) {
@@ -318,6 +318,8 @@ function stepHighlight(video, videoTimestamps) {
       ) {
         $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
         }
+
+        */
 //---------------------------------------------------------------------
       if (
         video.currentTime >= videoTimestamps.sopa[0][0] &&
@@ -429,6 +431,8 @@ function stepHighlight(video, videoTimestamps) {
     } else if (window.video == "vegan") {
       console.log("FOURTH IF " + window.video);
 
+
+      /*
       if (
         video.currentTime == videoTimestamps.vegan[0][0] 
       ) {
@@ -501,7 +505,7 @@ function stepHighlight(video, videoTimestamps) {
 
 
 
-
+*/
 
 
 
@@ -720,7 +724,7 @@ if (
       }
     } else if (window.video == "meat") {
       console.log("FOURTH IF " + window.video);
-
+/*
       if (
         video.currentTime == videoTimestamps.meat[0][0] 
       ) {
@@ -790,7 +794,7 @@ if (
     ) {
       $(".image-gallery-wrapper").animate({ scrollTop: "1000px" });
       }
-
+*/
 
 
 
@@ -1003,7 +1007,7 @@ if (
     } else if (window.video == "desert") {
       console.log("FOURTH IF " + window.video);
 
-
+/*
       if (
         video.currentTime == videoTimestamps.desert[0][0] 
       ) {
@@ -1053,7 +1057,7 @@ if (
     ) {
       $(".image-gallery-wrapper").animate({ scrollTop: "550px" });
       }
-
+*/
 
 
 
@@ -1099,7 +1103,7 @@ if (
       ) {
 
         if (
-          (video.currentTime <=videoTimestamps.desert[2][0] + 1) && (video.currentTime >=videoTimestamps.desert[2][0]-1)
+          (video.currentTime ==videoTimestamps.desert[2][0])
         ) {
           $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
           }

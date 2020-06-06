@@ -276,24 +276,67 @@ function videoControls(video, videoTimestamps) {
     }
   });
 
-  //TODO: NEXT RECIPE
-
-  //TODO: PREV RECIPE
 }
 
 function stepHighlight(video, videoTimestamps) {
   $("#main-video").on("timeupdate", function () {
-    //TODO (QUANDO METERMOS OUTROS VIDS): verficar primeiro qual current vid
 
     if (window.video == "sopa") {
       //console.log("FOURTH IF " + window.video);
+/*
+      if (
+        video.currentTime == videoTimestamps.sopa[0][0] 
+      ) {
 
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+      } 
+
+      else if (
+        video.currentTime == videoTimestamps.sopa[1][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+      } 
+
+      else if (
+        video.currentTime == videoTimestamps.sopa[2][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+        
+      } else if (
+        video.currentTime == videoTimestamps.sopa[3][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+ 
+      } 
+      else if (
+        video.currentTime == videoTimestamps.sopa[4][0]
+      ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+      } 
+      else if (
+        video.currentTime == videoTimestamps.sopa[5][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+        }
+
+        */
+//---------------------------------------------------------------------
       if (
         video.currentTime >= videoTimestamps.sopa[0][0] &&
         video.currentTime < videoTimestamps.sopa[0][1]
       ) {
+        
+        if (
+          (video.currentTime <=videoTimestamps.sopa[0][0] + 1) && (video.currentTime >=videoTimestamps.sopa[0][0] - 1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
         $(".ingredients-bubble").fadeIn(500);
         $(".img-step.ingredients, .txt-step.ingredients").css("opacity", "1");
+
+
+        
+
       } else {
         $(".ingredients-bubble").fadeOut(500);
         $(".img-step.ingredients, .txt-step.ingredients").css("opacity", "0.3");
@@ -302,7 +345,18 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.sopa[1][0] &&
         video.currentTime < videoTimestamps.sopa[1][1]
       ) {
+        
+        if (
+          (video.currentTime <=videoTimestamps.sopa[1][0] + 1) && (video.currentTime >=videoTimestamps.sopa[1][0])
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
         $(".img-step.two, .txt-step.two").css("opacity", "1");
+        
+       
+        
+
+
       } else {
         $(".img-step.two, .txt-step.two").css("opacity", "0.3");
       }
@@ -310,7 +364,18 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.sopa[2][0] &&
         video.currentTime < videoTimestamps.sopa[2][1]
       ) {
+        
+        if (
+          (video.currentTime <=videoTimestamps.sopa[2][0] + 1) && (video.currentTime >=videoTimestamps.sopa[2][0])
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
         $(".img-step.three, .txt-step.three").css("opacity", "1");
+
+        
+        
+
       } else {
         $(".img-step.three, .txt-step.three").css("opacity", "0.3");
       }
@@ -318,7 +383,17 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.sopa[3][0] &&
         video.currentTime < videoTimestamps.sopa[3][1]
       ) {
+        if (
+          (video.currentTime <=videoTimestamps.sopa[3][0] + 1) && (video.currentTime >=videoTimestamps.sopa[3][0])
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+        
         $(".img-step.four, .txt-step.four").css("opacity", "1");
+
+        
+
+        
       } else {
         $(".img-step.four, .txt-step.four").css("opacity", "0.3");
       }
@@ -326,8 +401,14 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.sopa[4][0] &&
         video.currentTime < videoTimestamps.sopa[4][1]
       ) {
+        if (
+          (video.currentTime <=videoTimestamps.sopa[4][0] + 1) && (video.currentTime >=videoTimestamps.sopa[4][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+          }
+        
         $(".img-step.five, .txt-step.five").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        
       } else {
         $(".img-step.five, .txt-step.five").css("opacity", "0.3");
       }
@@ -335,17 +416,129 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.sopa[5][0] &&
         video.currentTime < videoTimestamps.sopa[5][1]
       ) {
+        if (
+          (video.currentTime <=videoTimestamps.sopa[5][0] + 1) && (video.currentTime >=videoTimestamps.sopa[5][0])
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+          }
+        
         $(".img-step.six, .txt-step.six").css("opacity", "1");
+
+        
       } else {
         $(".img-step.six, .txt-step.six").css("opacity", "0.3");
       }
     } else if (window.video == "vegan") {
       console.log("FOURTH IF " + window.video);
 
+
+      /*
+      if (
+        video.currentTime == videoTimestamps.vegan[0][0] 
+      ) {
+
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+      } 
+
+      else if (
+        video.currentTime == videoTimestamps.vegan[1][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+      } 
+
+      else if (
+        video.currentTime == videoTimestamps.vegan[2][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+        
+      } else if (
+        video.currentTime == videoTimestamps.vegan[3][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+ 
+      } 
+      else if (
+        video.currentTime == videoTimestamps.vegan[4][0]
+      ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+      } 
+      else if (
+        video.currentTime == videoTimestamps.vegan[5][0]
+      ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+      }
+      else if (
+        video.currentTime == videoTimestamps.vegan[6][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "600px" });
+      }
+      else if (
+          video.currentTime == videoTimestamps.vegan[7][0]
+        ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "600px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.vegan[8][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "620px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.vegan[9][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "900px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.vegan[10][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "900px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.vegan[11][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "1000px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.vegan[12][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "1300px" });
+      }
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       if (
         video.currentTime >= videoTimestamps.vegan[0][0] &&
         video.currentTime < videoTimestamps.vegan[0][1]
       ) {
+
+
+if (
+          (video.currentTime <=videoTimestamps.vegan[0][0] + 1) && (video.currentTime >=videoTimestamps.vegan[0][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
+
+
         $(".ingredients-bubble").fadeIn(500);
         $(".img-step.ingredients, .txt-step.ingredients").css("opacity", "1");
       } else {
@@ -357,6 +550,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime < videoTimestamps.vegan[1][1]
       ) {
         $(".img-step.two, .txt-step.two").css("opacity", "1");
+
+        if (
+          (video.currentTime <=videoTimestamps.vegan[1][0] + 1) && (video.currentTime >=videoTimestamps.vegan[1][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
       } else {
         $(".img-step.two, .txt-step.two").css("opacity", "0.3");
       }
@@ -364,7 +564,18 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[2][0] &&
         video.currentTime < videoTimestamps.vegan[2][1]
       ) {
+
+
+        if (
+          (video.currentTime <=videoTimestamps.vegan[2][0] + 1) && (video.currentTime >=videoTimestamps.vegan[2][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
         $(".img-step.three, .txt-step.three").css("opacity", "1");
+
+
+
+
       } else {
         $(".img-step.three, .txt-step.three").css("opacity", "0.3");
       }
@@ -372,6 +583,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[3][0] &&
         video.currentTime < videoTimestamps.vegan[3][1]
       ) {
+
+
+        if (
+          (video.currentTime <=videoTimestamps.vegan[3][0] + 1) && (video.currentTime >=videoTimestamps.vegan[3][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+          }
         $(".img-step.four, .txt-step.four").css("opacity", "1");
       } else {
         $(".img-step.four, .txt-step.four").css("opacity", "0.3");
@@ -380,8 +598,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[4][0] &&
         video.currentTime < videoTimestamps.vegan[4][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.vegan[4][0] + 1) && (video.currentTime >=videoTimestamps.vegan[4][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+          }
         $(".img-step.five, .txt-step.five").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.five, .txt-step.five").css("opacity", "0.3");
       }
@@ -389,6 +612,12 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[5][0] &&
         video.currentTime < videoTimestamps.vegan[5][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.vegan[5][0] + 1) && (video.currentTime >=videoTimestamps.vegan[5][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "300px" });
+          }
         $(".img-step.six, .txt-step.six").css("opacity", "1");
       } else {
         $(".img-step.six, .txt-step.six").css("opacity", "0.3");
@@ -397,8 +626,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[6][0] &&
         video.currentTime < videoTimestamps.vegan[6][1]
       ) {
+        if (
+          (video.currentTime <=videoTimestamps.vegan[6][0] + 1) && (video.currentTime >=videoTimestamps.vegan[6][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "600px" });
+          }
         $(".img-step.seven, .txt-step.seven").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        //$("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.seven, .txt-step.seven").css("opacity", "0.3");
       }
@@ -406,6 +640,12 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[7][0] &&
         video.currentTime < videoTimestamps.vegan[7][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.vegan[7][0] + 1) && (video.currentTime >=videoTimestamps.vegan[7][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "600px" });
+          }
         $(".img-step.eight, .txt-step.eight").css("opacity", "1");
       } else {
         $(".img-step.eight, .txt-step.eight").css("opacity", "0.3");
@@ -414,8 +654,14 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[8][0] &&
         video.currentTime < videoTimestamps.vegan[8][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.vegan[8][0] + 1) && (video.currentTime >=videoTimestamps.vegan[8][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "620px" });
+          }
         $(".img-step.nine, .txt-step.nine").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+       // $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.nine, .txt-step.nine").css("opacity", "0.3");
       }
@@ -423,6 +669,11 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[9][0] &&
         video.currentTime < videoTimestamps.vegan[9][1]
       ) {
+        if (
+          (video.currentTime <=videoTimestamps.vegan[9][0] + 1) && (video.currentTime >=videoTimestamps.vegan[9][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "900px" });
+          }
         $(".img-step.ten, .txt-step.ten").css("opacity", "1");
       } else {
         $(".img-step.ten, .txt-step.ten").css("opacity", "0.3");
@@ -432,8 +683,14 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[10][0] &&
         video.currentTime < videoTimestamps.vegan[10][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.vegan[10][0] + 1) && (video.currentTime >=videoTimestamps.vegan[10][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "900px" });
+          }
         $(".img-step.eleven, .txt-step.eleven").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        //$("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.eleven, .txt-step.eleven").css("opacity", "0.3");
       }
@@ -441,6 +698,12 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[11][0] &&
         video.currentTime < videoTimestamps.vegan[11][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.vegan[11][0] + 1) && (video.currentTime >=videoTimestamps.vegan[11][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "1000px" });
+          }
         $(".img-step.twelve, .txt-step.twelve").css("opacity", "1");
       } else {
         $(".img-step.twelve, .txt-step.twelve").css("opacity", "0.3");
@@ -449,18 +712,105 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.vegan[12][0] &&
         video.currentTime < videoTimestamps.vegan[12][1]
       ) {
+        if (
+          (video.currentTime <=videoTimestamps.vegan[12][0] + 1) && (video.currentTime >=videoTimestamps.vegan[12][0])
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "1300px" });
+          }
         $(".img-step.thirteen, .txt-step.thirteen").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        //$("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.thirteen, .txt-step.thirteen").css("opacity", "0.3");
       }
     } else if (window.video == "meat") {
       console.log("FOURTH IF " + window.video);
+/*
+      if (
+        video.currentTime == videoTimestamps.meat[0][0] 
+      ) {
+
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+      } 
+
+      else if (
+        video.currentTime == videoTimestamps.meat[1][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+      } 
+
+      else if (
+        video.currentTime == videoTimestamps.meat[2][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+        
+      } else if (
+        video.currentTime == videoTimestamps.meat[3][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+ 
+      } 
+      else if (
+        video.currentTime == videoTimestamps.meat[4][0]
+      ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+      } 
+      else if (
+        video.currentTime == videoTimestamps.meat[5][0]
+      ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+      }
+      else if (
+        video.currentTime == videoTimestamps.meat[6][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+      }
+      else if (
+        video.currentTime == videoTimestamps.meat[7][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.meat[8][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "880px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.meat[9][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "880px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.meat[10][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "880px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.meat[11][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "880px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.meat[12][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "1000px" });
+      }
+*/
+
+
 
       if (
         video.currentTime >= videoTimestamps.meat[0][0] &&
         video.currentTime < videoTimestamps.meat[0][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[0][0] + 1) && (video.currentTime >=videoTimestamps.meat[0][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
+
+
         $(".ingredients-bubble").fadeIn(500);
         $(".img-step.ingredients, .txt-step.ingredients").css("opacity", "1");
       } else {
@@ -471,6 +821,16 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[1][0] &&
         video.currentTime < videoTimestamps.meat[1][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[1][0] + 1) && (video.currentTime >=videoTimestamps.meat[1][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
+
+
+
         $(".img-step.two, .txt-step.two").css("opacity", "1");
       } else {
         $(".img-step.two, .txt-step.two").css("opacity", "0.3");
@@ -479,6 +839,14 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[2][0] &&
         video.currentTime < videoTimestamps.meat[2][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[2][0] + 1) && (video.currentTime >=videoTimestamps.meat[2][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
+
         $(".img-step.three, .txt-step.three").css("opacity", "1");
       } else {
         $(".img-step.three, .txt-step.three").css("opacity", "0.3");
@@ -487,6 +855,12 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[3][0] &&
         video.currentTime < videoTimestamps.meat[3][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[3][0] + 1) && (video.currentTime >=videoTimestamps.meat[3][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
         $(".img-step.four, .txt-step.four").css("opacity", "1");
       } else {
         $(".img-step.four, .txt-step.four").css("opacity", "0.3");
@@ -495,8 +869,15 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[4][0] &&
         video.currentTime < videoTimestamps.meat[4][1]
       ) {
+
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[4][0] + 1) && (video.currentTime >=videoTimestamps.meat[4][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+          }
         $(".img-step.five, .txt-step.five").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+       // $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.five, .txt-step.five").css("opacity", "0.3");
       }
@@ -504,6 +885,15 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[5][0] &&
         video.currentTime < videoTimestamps.meat[5][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[5][0] + 1) && (video.currentTime >=videoTimestamps.meat[5][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+          }
+
+
+
         $(".img-step.six, .txt-step.six").css("opacity", "1");
       } else {
         $(".img-step.six, .txt-step.six").css("opacity", "0.3");
@@ -512,8 +902,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[6][0] &&
         video.currentTime < videoTimestamps.meat[6][1]
       ) {
+        if (
+          (video.currentTime <=videoTimestamps.meat[6][0] + 1) && (video.currentTime >=videoTimestamps.meat[6][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+          }
         $(".img-step.seven, .txt-step.seven").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        //$("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.seven, .txt-step.seven").css("opacity", "0.3");
       }
@@ -521,6 +916,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[7][0] &&
         video.currentTime < videoTimestamps.meat[7][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[7][0] + 1) && (video.currentTime >=videoTimestamps.meat[7][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+          }
+
         $(".img-step.eight, .txt-step.eight").css("opacity", "1");
       } else {
         $(".img-step.eight, .txt-step.eight").css("opacity", "0.3");
@@ -529,8 +931,14 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[8][0] &&
         video.currentTime < videoTimestamps.meat[8][1]
       ) {
+        if (
+          (video.currentTime <=videoTimestamps.meat[8][0] + 1) && (video.currentTime >=videoTimestamps.meat[8][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "880px" });
+          }
+
         $(".img-step.nine, .txt-step.nine").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+       // $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.nine, .txt-step.nine").css("opacity", "0.3");
       }
@@ -538,6 +946,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[9][0] &&
         video.currentTime < videoTimestamps.meat[9][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[9][0] + 1) && (video.currentTime >=videoTimestamps.meat[9][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "880px" });
+          }
+
         $(".img-step.ten, .txt-step.ten").css("opacity", "1");
       } else {
         $(".img-step.ten, .txt-step.ten").css("opacity", "0.3");
@@ -547,8 +962,14 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[10][0] &&
         video.currentTime < videoTimestamps.meat[10][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[10][0] + 1) && (video.currentTime >=videoTimestamps.meat[10][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "880px" });
+          }
         $(".img-step.eleven, .txt-step.eleven").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        //$("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.eleven, .txt-step.eleven").css("opacity", "0.3");
       }
@@ -556,6 +977,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[11][0] &&
         video.currentTime < videoTimestamps.meat[11][1]
       ) {
+
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[11][0] + 1) && (video.currentTime >=videoTimestamps.meat[11][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "880px" });
+          }
         $(".img-step.twelve, .txt-step.twelve").css("opacity", "1");
       } else {
         $(".img-step.twelve, .txt-step.twelve").css("opacity", "0.3");
@@ -564,18 +992,90 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.meat[12][0] &&
         video.currentTime < videoTimestamps.meat[12][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.meat[12][0] + 1) && (video.currentTime >=videoTimestamps.meat[12][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "1000px" });
+          }
+
         $(".img-step.thirteen, .txt-step.thirteen").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        //$("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.thirteen, .txt-step.thirteen").css("opacity", "0.3");
       }
     } else if (window.video == "desert") {
       console.log("FOURTH IF " + window.video);
 
+/*
+      if (
+        video.currentTime == videoTimestamps.desert[0][0] 
+      ) {
+
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+      } 
+
+      else if (
+        video.currentTime == videoTimestamps.desert[1][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+      } 
+
+      else if (
+        video.currentTime == videoTimestamps.desert[2][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+        
+      } else if (
+        video.currentTime == videoTimestamps.desert[3][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+ 
+      } 
+      else if (
+        video.currentTime == videoTimestamps.desert[4][0]
+      ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+      } 
+      else if (
+        video.currentTime == videoTimestamps.desert[5][0]
+      ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+      }
+      else if (
+        video.currentTime == videoTimestamps.desert[6][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+      }
+      else if (
+        video.currentTime == videoTimestamps.desert[7][0]
+      ) {
+        $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+      }
+      else if (
+      video.currentTime == videoTimestamps.desert[8][0]
+    ) {
+      $(".image-gallery-wrapper").animate({ scrollTop: "550px" });
+      }
+*/
+
+
+
+
       if (
         video.currentTime >= videoTimestamps.desert[0][0] &&
         video.currentTime < videoTimestamps.desert[0][1]
       ) {
+
+
+
+        if (
+          (video.currentTime <=videoTimestamps.desert[0][0] + 1) && (video.currentTime >=videoTimestamps.desert[0][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
+
         $(".ingredients-bubble").fadeIn(500);
         $(".img-step.ingredients, .txt-step.ingredients").css("opacity", "1");
       } else {
@@ -586,6 +1086,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.desert[1][0] &&
         video.currentTime < videoTimestamps.desert[1][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.desert[1][0] + 1) && (video.currentTime >=videoTimestamps.desert[1][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
         $(".img-step.two, .txt-step.two").css("opacity", "1");
       } else {
         $(".img-step.two, .txt-step.two").css("opacity", "0.3");
@@ -594,6 +1101,13 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.desert[2][0] &&
         video.currentTime < videoTimestamps.desert[2][1]
       ) {
+
+        if (
+          (video.currentTime ==videoTimestamps.desert[2][0])
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
         $(".img-step.three, .txt-step.three").css("opacity", "1");
       } else {
         $(".img-step.three, .txt-step.three").css("opacity", "0.3");
@@ -602,6 +1116,14 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.desert[3][0] &&
         video.currentTime < videoTimestamps.desert[3][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.desert[3][0] + 1) && (video.currentTime >=videoTimestamps.desert[3][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "20px" });
+          }
+
+
         $(".img-step.four, .txt-step.four").css("opacity", "1");
       } else {
         $(".img-step.four, .txt-step.four").css("opacity", "0.3");
@@ -610,8 +1132,17 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.desert[4][0] &&
         video.currentTime < videoTimestamps.desert[4][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.desert[4][0] + 1) && (video.currentTime >=videoTimestamps.desert[4][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+          }
+
+
+
         $(".img-step.five, .txt-step.five").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        //$("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.five, .txt-step.five").css("opacity", "0.3");
       }
@@ -619,6 +1150,14 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.desert[5][0] &&
         video.currentTime < videoTimestamps.desert[5][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.desert[5][0] + 1) && (video.currentTime >=videoTimestamps.desert[5][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+          }
+
+
         $(".img-step.six, .txt-step.six").css("opacity", "1");
       } else {
         $(".img-step.six, .txt-step.six").css("opacity", "0.3");
@@ -627,8 +1166,15 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.desert[6][0] &&
         video.currentTime < videoTimestamps.desert[6][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.desert[6][0] + 1) && (video.currentTime >=videoTimestamps.desert[6][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+          }
+
         $(".img-step.seven, .txt-step.seven").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        //$("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.seven, .txt-step.seven").css("opacity", "0.3");
       }
@@ -636,6 +1182,12 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.desert[7][0] &&
         video.currentTime < videoTimestamps.desert[7][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.desert[7][0] + 1) && (video.currentTime >=videoTimestamps.desert[7][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "450px" });
+          } 
         $(".img-step.eight, .txt-step.eight").css("opacity", "1");
       } else {
         $(".img-step.eight, .txt-step.eight").css("opacity", "0.3");
@@ -644,8 +1196,14 @@ function stepHighlight(video, videoTimestamps) {
         video.currentTime >= videoTimestamps.desert[8][0] &&
         video.currentTime < videoTimestamps.desert[8][1]
       ) {
+
+        if (
+          (video.currentTime <=videoTimestamps.desert[8][0] + 1) && (video.currentTime >=videoTimestamps.desert[8][0]-1)
+        ) {
+          $(".image-gallery-wrapper").animate({ scrollTop: "550px" });
+          }
         $(".img-step.nine, .txt-step.nine").css("opacity", "1");
-        $("#image-gallery-wrapper").animate({ scrollTop: "300px" });
+        //$("#image-gallery-wrapper").animate({ scrollTop: "300px" });
       } else {
         $(".img-step.nine, .txt-step.nine").css("opacity", "0.3");
       }

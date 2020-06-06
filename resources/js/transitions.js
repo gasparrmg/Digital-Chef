@@ -6,6 +6,23 @@ function detectVideo(event, CURRENT) {
   ) {
     window.video = "sopa";
 
+
+    $("#btn-text h2").animate(
+      {
+        color: "#000000",
+        opacity: 0.5,
+      },
+      500
+    );
+    $("#btn-images h2").animate(
+      {
+        color: "#f7f7f7",
+        opacity: 1,
+      },
+      500
+    );
+
+
     $("#soup-image").css("opacity", "1");
     $("#soup-title").css("opacity", "1");
     $("#images-soup").css("display", "block");
@@ -32,6 +49,22 @@ function detectVideo(event, CURRENT) {
     event.target.id == "dish-card-vegan-img" || event.target.id == "vegan-image"
   ) {
     window.video = "vegan";
+
+
+    $("#btn-text h2").animate(
+      {
+        color: "#000000",
+        opacity: 0.5,
+      },
+      500
+    );
+    $("#btn-images h2").animate(
+      {
+        color: "#f7f7f7",
+        opacity: 1,
+      },
+      500
+    );
 
     $("#vegan-image").css("opacity", "1");
     $("#vegan-title").css("opacity", "1");
@@ -61,6 +94,22 @@ function detectVideo(event, CURRENT) {
   ) {
     window.video = "meat";
     
+    $("#btn-text h2").animate(
+      {
+        color: "#000000",
+        opacity: 0.5,
+      },
+      500
+    );
+    $("#btn-images h2").animate(
+      {
+        color: "#f7f7f7",
+        opacity: 1,
+      },
+      500
+    );
+
+
     $("#meat-image").css("opacity", "1");
     $("#meat-title").css("opacity", "1");
     $("#images-meat").css("display", "block");
@@ -88,6 +137,22 @@ function detectVideo(event, CURRENT) {
     event.target.id == "dish-card-desert-img" || event.target.id == "desert-image"
   ) {
     window.video = "desert";
+
+    $("#btn-text h2").animate(
+      {
+        color: "#000000",
+        opacity: 0.5,
+      },
+      500
+    );
+    $("#btn-images h2").animate(
+      {
+        color: "#f7f7f7",
+        opacity: 1,
+      },
+      500
+    );
+
 
     $("#desert-image").css("opacity", "1");
     $("#desert-title").css("opacity", "1");
@@ -412,25 +477,25 @@ $(document).ready(function () {
 
     switch (window.video) {
       case "sopa":
-        $("#images-soup").fadeOut(1000, function () {
-          $("#text-soup").fadeIn(1000);
+        $("#images-soup").fadeOut(300, function () {
+          $("#text-soup").fadeIn(300);
         });
         break;
       case "vegan":
-        $("#images-vegan").fadeOut(1000, function () {
-          $("#text-vegan").fadeIn(1000);
+        $("#images-vegan").fadeOut(300, function () {
+          $("#text-vegan").fadeIn(300);
         });
         break;
       case "meat":
-        $("#images-meat").fadeOut(1000, function () {
-          $("#text-meat").fadeIn(1000);
+        $("#images-meat").fadeOut(300, function () {
+          $("#text-meat").fadeIn(300);
         });
 
         break;
 
       case "desert":
-        $("#images-desert").fadeOut(1000, function () {
-          $("#text-desert").fadeIn(1000);
+        $("#images-desert").fadeOut(300, function () {
+          $("#text-desert").fadeIn(300);
         });
 
         break;
@@ -457,23 +522,23 @@ $(document).ready(function () {
 
     switch (window.video) {
       case "sopa":
-        $("#text-soup").fadeOut(1000, function () {
-          $("#images-soup").fadeIn(1000);
+        $("#text-soup").fadeOut(300, function () {
+          $("#images-soup").fadeIn(300);
         });
         break;
       case "vegan":
-        $("#text-vegan").fadeOut(1000, function () {
-          $("#images-vegan").fadeIn(1000);
+        $("#text-vegan").fadeOut(300, function () {
+          $("#images-vegan").fadeIn(300);
         });
         break;
       case "meat":
-        $("#text-meat").fadeOut(1000, function () {
-          $("#images-meat").fadeIn(1000);
+        $("#text-meat").fadeOut(300, function () {
+          $("#images-meat").fadeIn(300);
         });
         break;
       case "desert":
-        $("#text-desert").fadeOut(1000, function () {
-          $("#images-desert").fadeIn(1000);
+        $("#text-desert").fadeOut(300, function () {
+          $("#images-desert").fadeIn(300);
         });
         break;
     }
@@ -493,7 +558,8 @@ $(document).ready(function () {
       500
     );
 
-    $("#btn-images").click();
+   // $("#btn-images").click();
+
   });
   //-------------------------------------------------------
 
@@ -525,22 +591,35 @@ $(document).ready(function () {
 
           //Switch right side
           if ($("#images-soup").css("display") != "none") {
-            $("#images-soup").fadeOut(1000, function () {
-              $("#images-vegan").fadeIn(1000);
+            $("#images-soup").fadeOut(500, function () {
+              $("#images-vegan").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
-            $("#text-soup").fadeOut(1000, function () {
-              $("#text-vegan").fadeIn(1000);
+            $("#text-soup").fadeOut(500, function () {
+              $("#text-vegan").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "vegan";
 
+          $("#btn-text h2").animate(
+            {
+              color: "#000000",
+              opacity: 0.5,
+            },
+            500
+          );
+          $("#btn-images h2").animate(
+            {
+              color: "#f7f7f7",
+              opacity: 1,
+            },
+            500
+          );
 
-
-          $("#vegan-image").css("opacity", "1");
+    $("#vegan-image").css("opacity", "1");
     $("#vegan-title").css("opacity", "1");
     $("#images-vegan").css("display", "block");
     $("#text-vegan").css("display", "none");
@@ -588,19 +667,34 @@ $(document).ready(function () {
             .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
 
           if ($("#images-vegan").css("display") != "none") {
-            $("#images-vegan").fadeOut(1000, function () {
-              $("#images-meat").fadeIn(1000);
+            $("#images-vegan").fadeOut(500, function () {
+              $("#images-meat").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
-            $("#text-vegan").fadeOut(1000, function () {
-              $("#text-meat").fadeIn(1000);
+            $("#text-vegan").fadeOut(500, function () {
+              $("#text-meat").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "meat";
 
+
+          $("#btn-text h2").animate(
+            {
+              color: "#000000",
+              opacity: 0.5,
+            },
+            500
+          );
+          $("#btn-images h2").animate(
+            {
+              color: "#f7f7f7",
+              opacity: 1,
+            },
+            500
+          );
 
 
           $("#meat-image").css("opacity", "1");
@@ -644,18 +738,34 @@ $(document).ready(function () {
             );
 
           if ($("#images-meat").css("display") != "none") {
-            $("#images-meat").fadeOut(1000, function () {
-              $("#images-desert").fadeIn(1000);
+            $("#images-meat").fadeOut(500, function () {
+              $("#images-desert").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
-            $("#text-meat").fadeOut(1000, function () {
+            $("#text-meat").fadeOut(500, function () {
               //$("#text-desert").fadeIn(1000);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "desert";
+
+
+          $("#btn-text h2").animate(
+            {
+              color: "#000000",
+              opacity: 0.5,
+            },
+            500
+          );
+          $("#btn-images h2").animate(
+            {
+              color: "#f7f7f7",
+              opacity: 1,
+            },
+            500
+          );
 
           $("#desert-image").css("opacity", "1");
           $("#desert-title").css("opacity", "1");
@@ -703,18 +813,34 @@ $(document).ready(function () {
             );
 
           if ($("#images-desert").css("display") != "none") {
-            $("#images-desert").fadeOut(1000, function () {
-              $("#images-soup").fadeIn(1000);
+            $("#images-desert").fadeOut(500, function () {
+              $("#images-soup").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
-            $("#text-desert").fadeOut(1000, function () {
-              $("#text-soup").fadeIn(1000);
+            $("#text-desert").fadeOut(500, function () {
+              $("#text-soup").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "sopa";
+
+
+          $("#btn-text h2").animate(
+            {
+              color: "#000000",
+              opacity: 0.5,
+            },
+            500
+          );
+          $("#btn-images h2").animate(
+            {
+              color: "#f7f7f7",
+              opacity: 1,
+            },
+            500
+          );
 
           $("#soup-image").css("opacity", "1");
           $("#soup-title").css("opacity", "1");
@@ -842,18 +968,34 @@ $(document).ready(function () {
 
           //Switch right side
           if ($("#images-soup").css("display") != "none") {
-            $("#images-soup").fadeOut(1000, function () {
-              $("#images-desert").fadeIn(1000);
+            $("#images-soup").fadeOut(500, function () {
+              $("#images-desert").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
-            $("#text-soup").fadeOut(1000, function () {
+            $("#text-soup").fadeOut(500, function () {
               //$("#text-desert").fadeIn(1000);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "desert";
+
+
+          $("#btn-text h2").animate(
+            {
+              color: "#000000",
+              opacity: 0.5,
+            },
+            500
+          );
+          $("#btn-images h2").animate(
+            {
+              color: "#f7f7f7",
+              opacity: 1,
+            },
+            500
+          );
 
           $("#desert-image").css("opacity", "1");
           $("#desert-title").css("opacity", "1");
@@ -897,18 +1039,34 @@ $(document).ready(function () {
             );
 
           if ($("#images-vegan").css("display") != "none") {
-            $("#images-vegan").fadeOut(1000, function () {
+            $("#images-vegan").fadeOut(500, function () {
               //$("#images-soup").fadeIn(1000);
               $("#main-video").get(0).play();
             });
           } else {
-            $("#text-vegan").fadeOut(1000, function () {
-              $("#text-soup").fadeIn(1000);
+            $("#text-vegan").fadeOut(500, function () {
+              $("#text-soup").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "sopa";
+
+
+          $("#btn-text h2").animate(
+            {
+              color: "#000000",
+              opacity: 0.5,
+            },
+            500
+          );
+          $("#btn-images h2").animate(
+            {
+              color: "#f7f7f7",
+              opacity: 1,
+            },
+            500
+          );
 
           $("#soup-image").css("opacity", "1");
           $("#soup-title").css("opacity", "1");
@@ -953,18 +1111,34 @@ $(document).ready(function () {
             .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
 
           if ($("#images-meat").css("display") != "none") {
-            $("#images-meat").fadeOut(1000, function () {
-              $("#images-vegan").fadeIn(1000);
+            $("#images-meat").fadeOut(500, function () {
+              $("#images-vegan").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
-            $("#text-meat").fadeOut(1000, function () {
+            $("#text-meat").fadeOut(500, function () {
               //$("#text-vegan").fadeIn(1000);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "vegan";
+
+          $("#btn-text h2").animate(
+            {
+              color: "#000000",
+              opacity: 0.5,
+            },
+            500
+          );
+          $("#btn-images h2").animate(
+            {
+              color: "#f7f7f7",
+              opacity: 1,
+            },
+            500
+          );
+
           $("#vegan-image").css("opacity", "1");
           $("#vegan-title").css("opacity", "1");
           $("#images-vegan").css("display", "block");
@@ -1005,18 +1179,34 @@ $(document).ready(function () {
             .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
 
           if ($("#images-desert").css("display") != "none") {
-            $("#images-desert").fadeOut(1000, function () {
-              $("#images-meat").fadeIn(1000);
+            $("#images-desert").fadeOut(500, function () {
+              $("#images-meat").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
-            $("#text-desert").fadeOut(1000, function () {
-              $("#text-meat").fadeIn(1000);
+            $("#text-desert").fadeOut(500, function () {
+              $("#text-meat").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }
 
           window.video = "meat";
+
+          $("#btn-text h2").animate(
+            {
+              color: "#000000",
+              opacity: 0.5,
+            },
+            500
+          );
+          $("#btn-images h2").animate(
+            {
+              color: "#f7f7f7",
+              opacity: 1,
+            },
+            500
+          );
+
           $("#meat-image").css("opacity", "1");
           $("#meat-title").css("opacity", "1");
           $("#images-meat").css("display", "block");
@@ -1121,6 +1311,21 @@ $(document).ready(function () {
    
     if (event.target.id == "soup-title" || event.target.id == "soup-image") {
 
+      $("#btn-text h2").animate(
+        {
+          color: "#000000",
+          opacity: 0.5,
+        },
+        500
+      );
+      $("#btn-images h2").animate(
+        {
+          color: "#f7f7f7",
+          opacity: 1,
+        },
+        500
+      );
+
       $("#soup-image").css("opacity", "1");
       $("#soup-title").css("opacity", "1");
       $("#images-soup").css("display", "block");
@@ -1176,6 +1381,21 @@ $(document).ready(function () {
       detectVideo(event);
     } else if (event.target.id == "vegan-title" ||event.target.id == "vegan-image") {
 
+      $("#btn-text h2").animate(
+        {
+          color: "#000000",
+          opacity: 0.5,
+        },
+        500
+      );
+      $("#btn-images h2").animate(
+        {
+          color: "#f7f7f7",
+          opacity: 1,
+        },
+        500
+      );
+
           $("#vegan-image").css("opacity", "1");
           $("#vegan-title").css("opacity", "1");
           $("#images-vegan").css("display", "block");
@@ -1218,13 +1438,13 @@ $(document).ready(function () {
 
       //Switch right side
       if ($("#images-soup").css("display") != "none") {
-        $("#images-soup").fadeOut(1000, function () {
-          $("#images-vegan").fadeIn(1000);
+        $("#images-soup").fadeOut(500, function () {
+          $("#images-vegan").fadeIn(500);
           $("#main-video").get(0).play();
         });
       } else {
-        $("#text-soup").fadeOut(1000, function () {
-          $("#images-vegan").fadeIn(1000);
+        $("#text-soup").fadeOut(500, function () {
+          $("#images-vegan").fadeIn(500);
           $("#main-video").get(0).play();
         });
       }
@@ -1235,6 +1455,22 @@ $(document).ready(function () {
       event.target.id == "meat-title" ||
       event.target.id == "meat-image"
     ) {
+
+
+      $("#btn-text h2").animate(
+        {
+          color: "#000000",
+          opacity: 0.5,
+        },
+        500
+      );
+      $("#btn-images h2").animate(
+        {
+          color: "#f7f7f7",
+          opacity: 1,
+        },
+        500
+      );
 
           $("#meat-image").css("opacity", "1");
           $("#meat-title").css("opacity", "1");
@@ -1274,13 +1510,13 @@ $(document).ready(function () {
 
       //Switch right side
       if ($("#images-soup").css("display") != "none") {
-        $("#images-soup").fadeOut(1000, function () {
-          $("#images-carne").fadeIn(1000);
+        $("#images-soup").fadeOut(500, function () {
+          $("#images-carne").fadeIn(500);
           $("#main-video").get(0).play();
         });
       } else {
-        $("#text-soup").fadeOut(1000, function () {
-          $("#text-carne").fadeIn(1000);
+        $("#text-soup").fadeOut(500, function () {
+          $("#text-carne").fadeIn(500);
           $("#main-video").get(0).play();
         });
       }
@@ -1292,6 +1528,22 @@ $(document).ready(function () {
       event.target.id == "desert-image"
     ) {
 
+
+      $("#btn-text h2").animate(
+        {
+          color: "#000000",
+          opacity: 0.5,
+        },
+        500
+      );
+      $("#btn-images h2").animate(
+        {
+          color: "#f7f7f7",
+          opacity: 1,
+        },
+        500
+      );
+      
       $("#desert-image").css("opacity", "1");
       $("#desert-title").css("opacity", "1");
       $("#images-desert").css("display", "block");
@@ -1328,12 +1580,12 @@ $(document).ready(function () {
 
       //Switch right side
       if ($("#images-soup").css("display") != "none") {
-        $("#images-soup").fadeOut(1000, function () {
-          $("#images-desert").fadeIn(1000);
+        $("#images-soup").fadeOut(500, function () {
+          $("#images-desert").fadeIn(500);
           $("#main-video").get(0).play();
         });
       } else {
-        $("#text-soup").fadeOut(1000, function () {
+        $("#text-soup").fadeOut(500, function () {
           //$("#text-desert").fadeIn(1000);
           $("#main-video").get(0).play();
         });

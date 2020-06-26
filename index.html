@@ -47,7 +47,7 @@
         src="./resources/img/logo_digitalchef.svg"
         alt="Digital Chef Logo"
       />
-      <h1>Digital Chef</h1>
+      <h1 id="app-title">Digital Chef</h1>
       <div class="container homepage">
         <div class="start-button homepage row grow1">
           <div class="col-md-12">
@@ -117,17 +117,21 @@
       </div>
 
       <!-- START Promotional button and popup-->
-      <div class="cta-promo-video text-center" id="videoLink">
-        <button
-          class="cta-promo-video-btn"
-          data-toggle="modal"
-          data-target="#exampleModalCenter"
-        >
-          <span>Vídeo promocional</span>
-        </button>
-      </div>
-      <div class="text-center select-recipe select">
-        <a class="text-decoration-none" href="#"><p>Selecionar uma receita</p></a>
+      <div id="homepage-btn-container">
+        <div class="cta-promo-video text-center" id="videoLink">
+          <button
+            class="cta-promo-video-btn"
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
+          >
+            <span>Vídeo promocional</span>
+          </button>
+        </div>
+        <div class="text-center select-recipe select">
+          <a class="text-decoration-none" href="#" id="btn-select-recipe"
+            ><p>Selecionar uma receita</p></a
+          >
+        </div>
       </div>
       <div class="modal fade" id="exampleModalCenter">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -180,11 +184,7 @@
               >
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
-                    <img
-                      id="listaingredientes"
-                      src=""
-                      class="img-responsive"
-                    />
+                    <img id="listaingredientes" src="" class="img-responsive" />
                   </div>
                 </div>
               </div>

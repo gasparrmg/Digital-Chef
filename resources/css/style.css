@@ -273,6 +273,11 @@ li.txt-step {
   opacity: 0.8;
 }
 
+button:active,
+button:focus {
+  outline: none;
+}
+
 @media only screen and (max-width: 1600px) {
   .logo-homepage {
     width: 10%;

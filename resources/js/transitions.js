@@ -592,12 +592,12 @@ $(document).ready(function () {
           //Switch right side
           if ($("#images-soup").css("display") != "none") {
             $("#images-soup").fadeOut(500, function () {
-              $("#images-vegan").fadeIn(500);
+              //$("#images-vegan").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
             $("#text-soup").fadeOut(500, function () {
-              $("#text-vegan").fadeIn(500);
+              //$("#text-vegan").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }
@@ -668,12 +668,12 @@ $(document).ready(function () {
 
           if ($("#images-vegan").css("display") != "none") {
             $("#images-vegan").fadeOut(500, function () {
-              $("#images-meat").fadeIn(500);
+              //$("#images-meat").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
             $("#text-vegan").fadeOut(500, function () {
-              $("#text-meat").fadeIn(500);
+              //$("#text-meat").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }
@@ -739,7 +739,7 @@ $(document).ready(function () {
 
           if ($("#images-meat").css("display") != "none") {
             $("#images-meat").fadeOut(500, function () {
-              $("#images-desert").fadeIn(500);
+              //$("#images-desert").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
@@ -814,12 +814,12 @@ $(document).ready(function () {
 
           if ($("#images-desert").css("display") != "none") {
             $("#images-desert").fadeOut(500, function () {
-              $("#images-soup").fadeIn(500);
+              //$("#images-soup").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
             $("#text-desert").fadeOut(500, function () {
-              $("#text-soup").fadeIn(500);
+              //$("#text-soup").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }
@@ -969,7 +969,7 @@ $(document).ready(function () {
           //Switch right side
           if ($("#images-soup").css("display") != "none") {
             $("#images-soup").fadeOut(500, function () {
-              $("#images-desert").fadeIn(500);
+              //$("#images-desert").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
@@ -1045,7 +1045,7 @@ $(document).ready(function () {
             });
           } else {
             $("#text-vegan").fadeOut(500, function () {
-              $("#text-soup").fadeIn(500);
+              //$("#text-soup").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }
@@ -1112,7 +1112,7 @@ $(document).ready(function () {
 
           if ($("#images-meat").css("display") != "none") {
             $("#images-meat").fadeOut(500, function () {
-              $("#images-vegan").fadeIn(500);
+              //$("#images-vegan").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
@@ -1180,12 +1180,12 @@ $(document).ready(function () {
 
           if ($("#images-desert").css("display") != "none") {
             $("#images-desert").fadeOut(500, function () {
-              $("#images-meat").fadeIn(500);
+              //$("#images-meat").fadeIn(500);
               $("#main-video").get(0).play();
             });
           } else {
             $("#text-desert").fadeOut(500, function () {
-              $("#text-meat").fadeIn(500);
+              //$("#text-meat").fadeIn(500);
               $("#main-video").get(0).play();
             });
           }

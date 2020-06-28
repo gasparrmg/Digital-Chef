@@ -274,7 +274,9 @@ li.txt-step {
 }
 
 button:active,
-button:focus {
+button:focus,
+a:active,
+a:focus {
   outline: none;
 }
 

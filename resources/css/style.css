@@ -71,16 +71,16 @@ h5 {
 
 .dish-list.homepage {
   margin: 30px 0px 40px 0px;
-  min-height: 250px;
-  display: none;
+  min-height: 310px;
+  display:none;
 }
 
-.start-button.homepage img {
+.start-button.homepage img{
   width: 200px;
 }
 
 .start-button h1 {
-  font-size: 167px;
+  font-size: 167px; 
   margin-bottom: 25px;
   display: none;
 }
@@ -240,7 +240,7 @@ li.txt-step {
 }
 
 .select-recipe {
-  margin-top: 25px;
+ margin-top: 25px;
 }
 
 /* --------ANIMATIONS-------- */
@@ -257,54 +257,17 @@ li.txt-step {
   }
 }
 
-.grow:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+
+.grow:hover
+{
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
 }
 
-.grow1:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.select-recipe button:hover {
-  opacity: 0.8;
-}
-
-button:active,
-button:focus,
-a:active,
-a:focus {
-  outline: none;
-}
-
-@media only screen and (max-width: 1600px) {
-  .logo-homepage {
-    width: 10%;
-  }
-
-  #app-title {
-    font-size: 50px;
-  }
-
-  .cta-promo-video {
-    float: left;
-  }
-
-  .select-recipe p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    color: #ff4d00;
-    text-transform: uppercase;
-    font-size: 16px;
-  }
-
-  #homepage-btn-container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-  }
+.grow1:hover
+{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
 }

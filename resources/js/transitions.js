@@ -366,7 +366,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitasopa.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitasopa.gif");
 
           $("#dish-title").text(
             "Sopa de Legumes com Feijão Branco e Espinafres"
@@ -394,7 +394,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitavegan.gif");
 
           $("#dish-title").text(
             "Almôndegas Crocantes de Feijão com Molho de Tomate e Pimento"
@@ -418,7 +418,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitacarne.gif");
 
           $("#dish-title").text("Strogonoff de Frango");
 
@@ -443,7 +443,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitadesert.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitadesert.gif");
 
           $("#dish-title").text("Bolo Mousse de Chocolate");
 
@@ -587,7 +587,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitavegan.gif");
 
           //Switch right side
           if ($("#images-soup").css("display") != "none") {
@@ -664,7 +664,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitacarne.gif");
 
           if ($("#images-vegan").css("display") != "none") {
             $("#images-vegan").fadeOut(500, function () {
@@ -728,7 +728,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitadesert.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitadesert.gif");
 
           $("#main-video")
             .get(0)
@@ -803,7 +803,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitasopa.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitasopa.gif");
 
           $("#main-video")
             .get(0)
@@ -957,7 +957,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitadesert.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitadesert.gif");
 
           $("#main-video")
             .get(0)
@@ -1029,7 +1029,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitasopa.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitasopa.gif");
 
           $("#main-video")
             .get(0)
@@ -1108,7 +1108,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitavegan.gif");
 
           if ($("#images-meat").css("display") != "none") {
             $("#images-meat").fadeOut(500, function () {
@@ -1176,7 +1176,7 @@ $(document).ready(function () {
 
           $("#listaingredientes")
             .get(0)
-            .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
+            .setAttribute("src", "./resources/img/receitas/receitacarne.gif");
 
           if ($("#images-desert").css("display") != "none") {
             $("#images-desert").fadeOut(500, function () {
@@ -1355,7 +1355,7 @@ $(document).ready(function () {
 
       $("#listaingredientes")
         .get(0)
-        .setAttribute("src", "./resources/img/receitas/receitasopa.jpg");
+        .setAttribute("src", "./resources/img/receitas/receitasopa.gif");
 
       $("#main-video")
         .get(0)
@@ -1427,7 +1427,7 @@ $(document).ready(function () {
 
       $("#listaingredientes")
         .get(0)
-        .setAttribute("src", "./resources/img/receitas/receitavegan.jpg");
+        .setAttribute("src", "./resources/img/receitas/receitavegan.gif");
 
       $("#main-video")
         .get(0)
@@ -1502,7 +1502,7 @@ $(document).ready(function () {
 
       $("#listaingredientes")
         .get(0)
-        .setAttribute("src", "./resources/img/receitas/receitacarne.jpg");
+        .setAttribute("src", "./resources/img/receitas/receitacarne.gif");
 
       $("#main-video")
         .get(0)
@@ -1572,7 +1572,7 @@ $(document).ready(function () {
 
       $("#listaingredientes")
         .get(0)
-        .setAttribute("src", "./resources/img/receitas/receitadesert.jpg");
+        .setAttribute("src", "./resources/img/receitas/receitadesert.gif");
 
       $("#main-video")
         .get(0)

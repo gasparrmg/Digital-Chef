@@ -1,11 +1,10 @@
 function detectVideo(event, CURRENT) {
-  
   if (
     event.target.id == "dish-card-sopa" ||
-    event.target.id == "dish-card-sopa-img" || event.target.id == "soup-image"
+    event.target.id == "dish-card-sopa-img" ||
+    event.target.id == "soup-image"
   ) {
     window.video = "sopa";
-
 
     $("#btn-text h2").animate(
       {
@@ -22,7 +21,6 @@ function detectVideo(event, CURRENT) {
       500
     );
 
-
     $("#soup-image").css("opacity", "1");
     $("#soup-title").css("opacity", "1");
     $("#images-soup").css("display", "block");
@@ -38,18 +36,16 @@ function detectVideo(event, CURRENT) {
     $("#images-meat").css("display", "none");
     $("#text-meat").css("display", "none");
 
-
     $("#desert-image").css("opacity", "0.5");
     $("#desert-title").css("opacity", "0.5");
     $("#images-desert").css("display", "none");
     $("#text-desert").css("display", "none");
-
   } else if (
     event.target.id == "dish-card-vegan" ||
-    event.target.id == "dish-card-vegan-img" || event.target.id == "vegan-image"
+    event.target.id == "dish-card-vegan-img" ||
+    event.target.id == "vegan-image"
   ) {
     window.video = "vegan";
-
 
     $("#btn-text h2").animate(
       {
@@ -71,13 +67,11 @@ function detectVideo(event, CURRENT) {
     $("#images-vegan").css("display", "block");
     $("#text-vegan").css("display", "none");
 
-
     $("#soup-image").css("opacity", "0.5");
     $("#soup-title").css("opacity", "0.5");
     $("#images-soup").css("display", "none");
     $("#text-soup").css("display", "none");
 
-    
     $("#meat-image").css("opacity", "0.5");
     $("#meat-title").css("opacity", "0.5");
     $("#images-meat").css("display", "none");
@@ -87,13 +81,13 @@ function detectVideo(event, CURRENT) {
     $("#desert-title").css("opacity", "0.5");
     $("#images-desert").css("display", "none");
     $("#text-desert").css("display", "none");
-
   } else if (
     event.target.id == "dish-card-meat" ||
-    event.target.id == "dish-card-meat-img" || event.target.id == "meat-image"
+    event.target.id == "dish-card-meat-img" ||
+    event.target.id == "meat-image"
   ) {
     window.video = "meat";
-    
+
     $("#btn-text h2").animate(
       {
         color: "#000000",
@@ -109,32 +103,29 @@ function detectVideo(event, CURRENT) {
       500
     );
 
-
     $("#meat-image").css("opacity", "1");
     $("#meat-title").css("opacity", "1");
     $("#images-meat").css("display", "block");
     $("#text-meat").css("display", "none");
-    
+
     $("#soup-image").css("opacity", "0.5");
     $("#soup-title").css("opacity", "0.5");
     $("#images-soup").css("display", "none");
     $("#text-soup").css("display", "none");
-
 
     $("#vegan-image").css("opacity", "0.5");
     $("#vegan-title").css("opacity", "0.5");
     $("#images-vegan").css("display", "none");
     $("#text-vegan").css("display", "none");
 
-
     $("#desert-image").css("opacity", "0.5");
     $("#desert-title").css("opacity", "0.5");
     $("#images-desert").css("display", "none");
     $("#text-desert").css("display", "none");
-
   } else if (
     event.target.id == "dish-card-desert" ||
-    event.target.id == "dish-card-desert-img" || event.target.id == "desert-image"
+    event.target.id == "dish-card-desert-img" ||
+    event.target.id == "desert-image"
   ) {
     window.video = "desert";
 
@@ -153,12 +144,11 @@ function detectVideo(event, CURRENT) {
       500
     );
 
-
     $("#desert-image").css("opacity", "1");
     $("#desert-title").css("opacity", "1");
     $("#images-desert").css("display", "block");
     $("#text-desert").css("display", "none");
-    
+
     $("#soup-image").css("opacity", "0.5");
     $("#soup-title").css("opacity", "0.5");
     $("#images-soup").css("display", "none");
@@ -173,7 +163,6 @@ function detectVideo(event, CURRENT) {
     $("#meat-title").css("opacity", "0.5");
     $("#images-meat").css("display", "none");
     $("#text-meat").css("display", "none");
-
   }
   ////// START- initialization part for synchro VIDEO<-> IMAGE <-> TEST
   let video = $("#main-video").get(0);
@@ -244,15 +233,15 @@ function detectVideo(event, CURRENT) {
 }
 
 $(document).ready(function () {
-  $(".select-recipe a").click(function (e) {
+  $(".select-recipe button").click(function (e) {
     e.preventDefault();
 
     if ($(".select-recipe").hasClass("select")) {
       console.log("SELECT");
 
-      $(".select-recipe p").fadeOut(500, function () {
-        $(".select-recipe p").text("GO BACK");
-        $(".select-recipe p").fadeIn(500);
+      $(".select-recipe span").fadeOut(500, function () {
+        $(".select-recipe span").text("GO BACK");
+        $(".select-recipe span").fadeIn(500);
       });
 
       $(".start-button").fadeOut(500, function () {
@@ -263,9 +252,9 @@ $(document).ready(function () {
       $(".select-recipe").addClass("back");
     } else if ($(".select-recipe").hasClass("back")) {
       console.log("BACK");
-      $(".select-recipe p").fadeOut(500, function () {
-        $(".select-recipe p").text("Select a recipe");
-        $(".select-recipe p").fadeIn(500);
+      $(".select-recipe span").fadeOut(500, function () {
+        $(".select-recipe span").text("Select a recipe");
+        $(".select-recipe span").fadeIn(500);
       });
 
       $(".dish-list.homepage").fadeOut(500, function () {
@@ -558,8 +547,7 @@ $(document).ready(function () {
       500
     );
 
-   // $("#btn-images").click();
-
+    // $("#btn-images").click();
   });
   //-------------------------------------------------------
 
@@ -619,39 +607,28 @@ $(document).ready(function () {
             500
           );
 
-    $("#vegan-image").css("opacity", "1");
-    $("#vegan-title").css("opacity", "1");
-    $("#images-vegan").css("display", "block");
-    $("#text-vegan").css("display", "none");
+          $("#vegan-image").css("opacity", "1");
+          $("#vegan-title").css("opacity", "1");
+          $("#images-vegan").css("display", "block");
+          $("#text-vegan").css("display", "none");
 
+          $("#soup-image").css("opacity", "0.5");
+          $("#soup-title").css("opacity", "0.5");
+          $("#images-soup").css("display", "none");
+          $("#text-soup").css("display", "none");
 
-    $("#soup-image").css("opacity", "0.5");
-    $("#soup-title").css("opacity", "0.5");
-    $("#images-soup").css("display", "none");
-    $("#text-soup").css("display", "none");
+          $("#meat-image").css("opacity", "0.5");
+          $("#meat-title").css("opacity", "0.5");
+          $("#images-meat").css("display", "none");
+          $("#text-meat").css("display", "none");
 
-    
-    $("#meat-image").css("opacity", "0.5");
-    $("#meat-title").css("opacity", "0.5");
-    $("#images-meat").css("display", "none");
-    $("#text-meat").css("display", "none");
-
-    $("#desert-image").css("opacity", "0.5");
-    $("#desert-title").css("opacity", "0.5");
-    $("#images-desert").css("display", "none");
-    $("#text-desert").css("display", "none");
+          $("#desert-image").css("opacity", "0.5");
+          $("#desert-title").css("opacity", "0.5");
+          $("#images-desert").css("display", "none");
+          $("#text-desert").css("display", "none");
 
           break;
         case "vegan":
-
-
-
-
-
-
-
-
-        
           $("#dish-title")
             .animate({ opacity: 0 }, 1000, function () {
               $(this).text("Strogonoff de Frango");
@@ -680,7 +657,6 @@ $(document).ready(function () {
 
           window.video = "meat";
 
-
           $("#btn-text h2").animate(
             {
               color: "#000000",
@@ -696,28 +672,25 @@ $(document).ready(function () {
             500
           );
 
-
           $("#meat-image").css("opacity", "1");
-    $("#meat-title").css("opacity", "1");
-    $("#images-meat").css("display", "block");
-    $("#text-meat").css("display", "none");
-    
-    $("#soup-image").css("opacity", "0.5");
-    $("#soup-title").css("opacity", "0.5");
-    $("#images-soup").css("display", "none");
-    $("#text-soup").css("display", "none");
+          $("#meat-title").css("opacity", "1");
+          $("#images-meat").css("display", "block");
+          $("#text-meat").css("display", "none");
 
+          $("#soup-image").css("opacity", "0.5");
+          $("#soup-title").css("opacity", "0.5");
+          $("#images-soup").css("display", "none");
+          $("#text-soup").css("display", "none");
 
-    $("#vegan-image").css("opacity", "0.5");
-    $("#vegan-title").css("opacity", "0.5");
-    $("#images-vegan").css("display", "none");
-    $("#text-vegan").css("display", "none");
+          $("#vegan-image").css("opacity", "0.5");
+          $("#vegan-title").css("opacity", "0.5");
+          $("#images-vegan").css("display", "none");
+          $("#text-vegan").css("display", "none");
 
-
-    $("#desert-image").css("opacity", "0.5");
-    $("#desert-title").css("opacity", "0.5");
-    $("#images-desert").css("display", "none");
-    $("#text-desert").css("display", "none");
+          $("#desert-image").css("opacity", "0.5");
+          $("#desert-title").css("opacity", "0.5");
+          $("#images-desert").css("display", "none");
+          $("#text-desert").css("display", "none");
           break;
         case "meat":
           $("#dish-title")
@@ -751,7 +724,6 @@ $(document).ready(function () {
 
           window.video = "desert";
 
-
           $("#btn-text h2").animate(
             {
               color: "#000000",
@@ -771,17 +743,17 @@ $(document).ready(function () {
           $("#desert-title").css("opacity", "1");
           $("#images-desert").css("display", "block");
           $("#text-desert").css("display", "none");
-          
+
           $("#soup-image").css("opacity", "0.5");
           $("#soup-title").css("opacity", "0.5");
           $("#images-soup").css("display", "none");
           $("#text-soup").css("display", "none");
-      
+
           $("#vegan-image").css("opacity", "0.5");
           $("#vegan-title").css("opacity", "0.5");
           $("#images-vegan").css("display", "none");
           $("#text-vegan").css("display", "none");
-      
+
           $("#meat-image").css("opacity", "0.5");
           $("#meat-title").css("opacity", "0.5");
           $("#images-meat").css("display", "none");
@@ -789,12 +761,6 @@ $(document).ready(function () {
           break;
 
         case "desert":
-
-
-         
-
-
-        
           $("#dish-title")
             .animate({ opacity: 0 }, 1000, function () {
               $(this).text("Sopa de Legumes com Feijão Branco e Espinafres");
@@ -826,7 +792,6 @@ $(document).ready(function () {
 
           window.video = "sopa";
 
-
           $("#btn-text h2").animate(
             {
               color: "#000000",
@@ -846,24 +811,22 @@ $(document).ready(function () {
           $("#soup-title").css("opacity", "1");
           $("#images-soup").css("display", "block");
           $("#text-soup").css("display", "none");
-      
+
           $("#vegan-image").css("opacity", "0.5");
           $("#vegan-title").css("opacity", "0.5");
           $("#images-vegan").css("display", "none");
           $("#text-vegan").css("display", "none");
-      
+
           $("#meat-image").css("opacity", "0.5");
           $("#meat-title").css("opacity", "0.5");
           $("#images-meat").css("display", "none");
           $("#text-meat").css("display", "none");
-      
-      
+
           $("#desert-image").css("opacity", "0.5");
           $("#desert-title").css("opacity", "0.5");
           $("#images-desert").css("display", "none");
           $("#text-desert").css("display", "none");
 
-          
           break;
       }
 
@@ -981,7 +944,6 @@ $(document).ready(function () {
 
           window.video = "desert";
 
-
           $("#btn-text h2").animate(
             {
               color: "#000000",
@@ -1001,22 +963,21 @@ $(document).ready(function () {
           $("#desert-title").css("opacity", "1");
           $("#images-desert").css("display", "block");
           $("#text-desert").css("display", "none");
-          
+
           $("#soup-image").css("opacity", "0.5");
           $("#soup-title").css("opacity", "0.5");
           $("#images-soup").css("display", "none");
           $("#text-soup").css("display", "none");
-      
+
           $("#vegan-image").css("opacity", "0.5");
           $("#vegan-title").css("opacity", "0.5");
           $("#images-vegan").css("display", "none");
           $("#text-vegan").css("display", "none");
-      
+
           $("#meat-image").css("opacity", "0.5");
           $("#meat-title").css("opacity", "0.5");
           $("#images-meat").css("display", "none");
           $("#text-meat").css("display", "none");
-
 
           break;
 
@@ -1052,7 +1013,6 @@ $(document).ready(function () {
 
           window.video = "sopa";
 
-
           $("#btn-text h2").animate(
             {
               color: "#000000",
@@ -1072,18 +1032,17 @@ $(document).ready(function () {
           $("#soup-title").css("opacity", "1");
           $("#images-soup").css("display", "block");
           $("#text-soup").css("display", "none");
-      
+
           $("#vegan-image").css("opacity", "0.5");
           $("#vegan-title").css("opacity", "0.5");
           $("#images-vegan").css("display", "none");
           $("#text-vegan").css("display", "none");
-      
+
           $("#meat-image").css("opacity", "0.5");
           $("#meat-title").css("opacity", "0.5");
           $("#images-meat").css("display", "none");
           $("#text-meat").css("display", "none");
-      
-      
+
           $("#desert-image").css("opacity", "0.5");
           $("#desert-title").css("opacity", "0.5");
           $("#images-desert").css("display", "none");
@@ -1143,24 +1102,22 @@ $(document).ready(function () {
           $("#vegan-title").css("opacity", "1");
           $("#images-vegan").css("display", "block");
           $("#text-vegan").css("display", "none");
-      
-      
+
           $("#soup-image").css("opacity", "0.5");
           $("#soup-title").css("opacity", "0.5");
           $("#images-soup").css("display", "none");
           $("#text-soup").css("display", "none");
-      
-          
+
           $("#meat-image").css("opacity", "0.5");
           $("#meat-title").css("opacity", "0.5");
           $("#images-meat").css("display", "none");
           $("#text-meat").css("display", "none");
-      
+
           $("#desert-image").css("opacity", "0.5");
           $("#desert-title").css("opacity", "0.5");
           $("#images-desert").css("display", "none");
           $("#text-desert").css("display", "none");
-          
+
           break;
 
         case "desert":
@@ -1211,19 +1168,17 @@ $(document).ready(function () {
           $("#meat-title").css("opacity", "1");
           $("#images-meat").css("display", "block");
           $("#text-meat").css("display", "none");
-          
+
           $("#soup-image").css("opacity", "0.5");
           $("#soup-title").css("opacity", "0.5");
           $("#images-soup").css("display", "none");
           $("#text-soup").css("display", "none");
-      
-      
+
           $("#vegan-image").css("opacity", "0.5");
           $("#vegan-title").css("opacity", "0.5");
           $("#images-vegan").css("display", "none");
           $("#text-vegan").css("display", "none");
-      
-      
+
           $("#desert-image").css("opacity", "0.5");
           $("#desert-title").css("opacity", "0.5");
           $("#images-desert").css("display", "none");
@@ -1303,14 +1258,8 @@ $(document).ready(function () {
 
   $("#btn-prev-recipe").on("click", prevVideo);
 
-  
-
-
-
   $(".dish-list.videopage .dish-card a").click((event) => {
-   
     if (event.target.id == "soup-title" || event.target.id == "soup-image") {
-
       $("#btn-text h2").animate(
         {
           color: "#000000",
@@ -1330,18 +1279,17 @@ $(document).ready(function () {
       $("#soup-title").css("opacity", "1");
       $("#images-soup").css("display", "block");
       $("#text-soup").css("display", "none");
-  
+
       $("#vegan-image").css("opacity", "0.5");
       $("#vegan-title").css("opacity", "0.5");
       $("#images-vegan").css("display", "none");
       $("#text-vegan").css("display", "none");
-  
+
       $("#meat-image").css("opacity", "0.5");
       $("#meat-title").css("opacity", "0.5");
       $("#images-meat").css("display", "none");
       $("#text-meat").css("display", "none");
-  
-  
+
       $("#desert-image").css("opacity", "0.5");
       $("#desert-title").css("opacity", "0.5");
       $("#images-desert").css("display", "none");
@@ -1365,22 +1313,26 @@ $(document).ready(function () {
         );
 
       //Switch right side
-      if ($("#images-soup").css("display") != "none") {/*
+      if ($("#images-soup").css("display") != "none") {
+        /*
         $("#images-soup").fadeOut(1000, function () {
           $("#images-soup").fadeIn(1000);*/
-          $("#main-video").get(0).play();
+        $("#main-video").get(0).play();
         /*});
       } else {
         $("#text-soup").fadeOut(1000, function () {
           $("#text-soup").fadeIn(1000);
           $("#main-video").get(0).play();
         });
-      */}
-      
+      */
+      }
+
       window.video = "sopa";
       detectVideo(event);
-    } else if (event.target.id == "vegan-title" ||event.target.id == "vegan-image") {
-
+    } else if (
+      event.target.id == "vegan-title" ||
+      event.target.id == "vegan-image"
+    ) {
       $("#btn-text h2").animate(
         {
           color: "#000000",
@@ -1396,27 +1348,25 @@ $(document).ready(function () {
         500
       );
 
-          $("#vegan-image").css("opacity", "1");
-          $("#vegan-title").css("opacity", "1");
-          $("#images-vegan").css("display", "block");
-          $("#text-vegan").css("display", "none");
-      
-      
-          $("#soup-image").css("opacity", "0.5");
-          $("#soup-title").css("opacity", "0.5");
-          $("#images-soup").css("display", "none");
-          $("#text-soup").css("display", "none");
-      
-          
-          $("#meat-image").css("opacity", "0.5");
-          $("#meat-title").css("opacity", "0.5");
-          $("#images-meat").css("display", "none");
-          $("#text-meat").css("display", "none");
-      
-          $("#desert-image").css("opacity", "0.5");
-          $("#desert-title").css("opacity", "0.5");
-          $("#images-desert").css("display", "none");
-          $("#text-desert").css("display", "none");
+      $("#vegan-image").css("opacity", "1");
+      $("#vegan-title").css("opacity", "1");
+      $("#images-vegan").css("display", "block");
+      $("#text-vegan").css("display", "none");
+
+      $("#soup-image").css("opacity", "0.5");
+      $("#soup-title").css("opacity", "0.5");
+      $("#images-soup").css("display", "none");
+      $("#text-soup").css("display", "none");
+
+      $("#meat-image").css("opacity", "0.5");
+      $("#meat-title").css("opacity", "0.5");
+      $("#images-meat").css("display", "none");
+      $("#text-meat").css("display", "none");
+
+      $("#desert-image").css("opacity", "0.5");
+      $("#desert-title").css("opacity", "0.5");
+      $("#images-desert").css("display", "none");
+      $("#text-desert").css("display", "none");
       $("#dish-title")
         .animate({ opacity: 0 }, 1000, function () {
           $(this).text(
@@ -1455,8 +1405,6 @@ $(document).ready(function () {
       event.target.id == "meat-title" ||
       event.target.id == "meat-image"
     ) {
-
-
       $("#btn-text h2").animate(
         {
           color: "#000000",
@@ -1472,27 +1420,25 @@ $(document).ready(function () {
         500
       );
 
-          $("#meat-image").css("opacity", "1");
-          $("#meat-title").css("opacity", "1");
-          $("#images-meat").css("display", "block");
-          $("#text-meat").css("display", "none");
-          
-          $("#soup-image").css("opacity", "0.5");
-          $("#soup-title").css("opacity", "0.5");
-          $("#images-soup").css("display", "none");
-          $("#text-soup").css("display", "none");
-      
-      
-          $("#vegan-image").css("opacity", "0.5");
-          $("#vegan-title").css("opacity", "0.5");
-          $("#images-vegan").css("display", "none");
-          $("#text-vegan").css("display", "none");
-      
-      
-          $("#desert-image").css("opacity", "0.5");
-          $("#desert-title").css("opacity", "0.5");
-          $("#images-desert").css("display", "none");
-          $("#text-desert").css("display", "none");
+      $("#meat-image").css("opacity", "1");
+      $("#meat-title").css("opacity", "1");
+      $("#images-meat").css("display", "block");
+      $("#text-meat").css("display", "none");
+
+      $("#soup-image").css("opacity", "0.5");
+      $("#soup-title").css("opacity", "0.5");
+      $("#images-soup").css("display", "none");
+      $("#text-soup").css("display", "none");
+
+      $("#vegan-image").css("opacity", "0.5");
+      $("#vegan-title").css("opacity", "0.5");
+      $("#images-vegan").css("display", "none");
+      $("#text-vegan").css("display", "none");
+
+      $("#desert-image").css("opacity", "0.5");
+      $("#desert-title").css("opacity", "0.5");
+      $("#images-desert").css("display", "none");
+      $("#text-desert").css("display", "none");
 
       $("#dish-title")
         .animate({ opacity: 0 }, 1000, function () {
@@ -1527,8 +1473,6 @@ $(document).ready(function () {
       event.target.id == "desert-title" ||
       event.target.id == "desert-image"
     ) {
-
-
       $("#btn-text h2").animate(
         {
           color: "#000000",
@@ -1543,22 +1487,22 @@ $(document).ready(function () {
         },
         500
       );
-      
+
       $("#desert-image").css("opacity", "1");
       $("#desert-title").css("opacity", "1");
       $("#images-desert").css("display", "block");
       $("#text-desert").css("display", "none");
-      
+
       $("#soup-image").css("opacity", "0.5");
       $("#soup-title").css("opacity", "0.5");
       $("#images-soup").css("display", "none");
       $("#text-soup").css("display", "none");
-  
+
       $("#vegan-image").css("opacity", "0.5");
       $("#vegan-title").css("opacity", "0.5");
       $("#images-vegan").css("display", "none");
       $("#text-vegan").css("display", "none");
-  
+
       $("#meat-image").css("opacity", "0.5");
       $("#meat-title").css("opacity", "0.5");
       $("#images-meat").css("display", "none");
@@ -1663,8 +1607,4 @@ $(document).ready(function () {
 
     stepClicks(video, videoTimestamps);
   });
-
-
 });
- 
-

@@ -1,5 +1,4 @@
 function detectVideo(event, CURRENT) {
-  
   if (
     event.target.id == "dish-card-sopa" ||
     event.target.id == "dish-card-sopa-img" || event.target.id == "soup-image" || event.target.id == "dish-title-sopa" || event.target.id == "dish-desc-sopa"

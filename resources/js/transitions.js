@@ -2,7 +2,7 @@ function detectVideo(event, CURRENT) {
   
   if (
     event.target.id == "dish-card-sopa" ||
-    event.target.id == "dish-card-sopa-img" || event.target.id == "soup-image"
+    event.target.id == "dish-card-sopa-img" || event.target.id == "soup-image" || event.target.id == "dish-title-sopa" || event.target.id == "dish-desc-sopa"
   ) {
     window.video = "sopa";
 
@@ -46,7 +46,7 @@ function detectVideo(event, CURRENT) {
 
   } else if (
     event.target.id == "dish-card-vegan" ||
-    event.target.id == "dish-card-vegan-img" || event.target.id == "vegan-image"
+    event.target.id == "dish-card-vegan-img" || event.target.id == "vegan-image" || event.target.id == "dish-title-vegan" || event.target.id == "dish-desc-vegan"
   ) {
     window.video = "vegan";
 
@@ -90,7 +90,7 @@ function detectVideo(event, CURRENT) {
 
   } else if (
     event.target.id == "dish-card-meat" ||
-    event.target.id == "dish-card-meat-img" || event.target.id == "meat-image"
+    event.target.id == "dish-card-meat-img" || event.target.id == "meat-image" || event.target.id == "dish-title-meat" || event.target.id == "dish-desc-meat"
   ) {
     window.video = "meat";
     
@@ -134,7 +134,7 @@ function detectVideo(event, CURRENT) {
 
   } else if (
     event.target.id == "dish-card-desert" ||
-    event.target.id == "dish-card-desert-img" || event.target.id == "desert-image"
+    event.target.id == "dish-card-desert-img" || event.target.id == "desert-image" || event.target.id == "dish-title-desert" || event.target.id == "dish-desc-desert"
   ) {
     window.video = "desert";
 

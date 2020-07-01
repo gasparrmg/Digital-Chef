@@ -644,7 +644,7 @@ if (
         if (
           (video.currentTime <=videoTimestamps.vegan[7][0] + 1) && (video.currentTime >=videoTimestamps.vegan[7][0]-1)
         ) {
-          $(".image-gallery-wrapper").animate({ scrollTop: "600px" });
+          $(".image-gallery-wrapper").animate({ scrollTop: "640px" });
           }
         $(".img-step.eight, .txt-step.eight").css("opacity", "1");
       } else {

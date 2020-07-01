@@ -47,7 +47,7 @@
         src="./resources/img/logo_digitalchef.svg"
         alt="Digital Chef Logo"
       />
-      <h1 id="app-title">Digital Chef</h1>
+      <h1>Digital Chef</h1>
       <div class="container homepage">
         <div class="start-button homepage row grow1">
           <div class="col-md-12">
@@ -71,8 +71,8 @@
                 src="./resources/img/soup.svg"
                 alt="Image Sopa"
               />
-              <h2>Sopa</h2>
-              <p id="dish-name-sopa" class="dish-name">Sopa de feijão branco e espinafres</p>
+              <h2 id="dish-title-sopa">Sopa</h2>
+              <p id="dish-desc-sopa" class="dish-name">Sopa de feijão branco e espinafres</p>
             </a>
           </div>
           <div class="dish-card col-sm grow">
@@ -83,8 +83,8 @@
                 src="./resources/img/vegan.svg"
                 alt="Image Vegan"
               />
-              <h2>Vegan</h2>
-              <p id="dish-name-vegan" class="dish-name">
+              <h2 id="dish-title-vegan">Vegan</h2>
+              <p id="dish-desc-vegan" class="dish-name">
                 Almôndegas crocantes de feijão com molho de tomate e pimento
               </p>
             </a>
@@ -97,8 +97,8 @@
                 src="./resources/img/meat.svg"
                 alt="Image Carne"
               />
-              <h2>Carne</h2>
-              <p id="dish-name-meat" class="dish-name">Strogonoff de frango</p>
+              <h2 id="dish-title-meat">Carne</h2>
+              <p id="dish-desc-meat" class="dish-name">Strogonoff de frango</p>
             </a>
           </div>
           <div class="dish-card col-sm grow">
@@ -109,32 +109,25 @@
                 src="./resources/img/desert.svg"
                 alt="Image Sobremesa"
               />
-              <h2>Doce</h2>
-              <p id="dish-name-desert" class="dish-name">Mousse de chocolate</p>
+              <h2 id="dish-title-desert">Doce</h2>
+              <p id="dish-desc-desert" class="dish-name">Mousse de chocolate</p>
             </a>
           </div>
         </div>
       </div>
 
       <!-- START Promotional button and popup-->
-      <div id="homepage-btn-container">
-        <div class="cta-promo-video text-center" id="videoLink">
-          <button
-            class="cta-promo-video-btn"
-            data-toggle="modal"
-            data-target="#exampleModalCenter"
-          >
-            <span>Vídeo promocional</span>
-          </button>
-        </div>
-        <div class="text-center select-recipe select">
-          <button
-            class="text-decoration-none cta-promo-video-btn"
-            id="btn-select-recipe"
-          >
-            <span>Selecionar uma receita</span>
-          </button>
-        </div>
+      <div class="cta-promo-video text-center" id="videoLink">
+        <button
+          class="cta-promo-video-btn"
+          data-toggle="modal"
+          data-target="#exampleModalCenter"
+        >
+          <span>Vídeo promocional</span>
+        </button>
+      </div>
+      <div class="text-center select-recipe select">
+        <a class="text-decoration-none" href="#"><p>Selecionar uma receita</p></a>
       </div>
       <div class="modal fade" id="exampleModalCenter">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -187,7 +180,11 @@
               >
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
-                    <img id="listaingredientes" src="" class="img-responsive" />
+                    <img
+                      id="listaingredientes"
+                      src=""
+                      class="img-responsive"
+                    />
                   </div>
                 </div>
               </div>
